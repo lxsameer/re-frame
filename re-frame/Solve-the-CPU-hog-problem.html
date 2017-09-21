@@ -1,0 +1,936 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Solve the CPU hog problem · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Using-Stateful-JS-Components.html" />
+    
+    
+    <link rel="prev" href="Performance-Problems.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Solve the CPU hog problem</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="solving-the-cpu-hog-problem">Solving The CPU Hog Problem</h2>
+<p>Sometimes a handler has a lot of CPU intensive work to do, and 
+getting through it will take a while. </p>
+<p>When a handler hogs the CPU, nothing else can happen. Browsers 
+only give us one thread of execution and that CPU-hogging handler 
+owns it, and it isn&apos;t giving it up. The UI will be frozen and 
+there will be no processing of any other handlers (eg: <code>on-success</code> 
+of POSTs), etc, etc. Nothing.</p>
+<p>And a frozen UI is a problem.  GUI repaints are not happening. And 
+user interactions are not being processed.</p>
+<p>How are we to show progress updates like &quot;Hey, X% completed&quot;?  Or 
+how can we handle the user clicking on that &quot;Cancel&quot; button trying 
+to stop this long running process?</p>
+<p>We need a means by which long running handlers can hand control
+back for &quot;other&quot; processing every so often, while still continuing 
+on with their computation.</p>
+<h2 id="the-re-frame-solution">The re-frame Solution</h2>
+<p><strong>First</strong>, all long running, CPU-hogging processes are put in event handlers.
+Not in subscriptions.  Not in components. Not hard to do,
+but worth establishing as a rule, right up front. </p>
+<p><strong>Second</strong>, you must be able to break up that CPU 
+work into chunks. You need a way to do part of the work, pause, 
+then resume from where you left off (more in a minute).</p>
+<p>In a perfect world, each chunk would take something like
+16ms (60 fps). If you go longer, say 50ms or 100ms, it is no train 
+smash, but UI responsiveness will degrade and animations, like 
+busy spinners,  will get jerky. Shorter is better, but less than 
+16ms delivers no added smoothness. </p>
+<p><strong>Third</strong>, within our handler, after it completes one unit (chunk)
+of work, it should not continue straight on with the next.  Instead, 
+it should do a <code>dispatch</code> to itself and, in the event vector, 
+include something like the following: </p>
+<ol>
+<li>a flag to say the work is not finished</li>
+<li>the working state so far; and </li>
+<li>what chunk to do next. </li>
+</ol>
+<h2 id="a-sketch">A Sketch</h2>
+<p>Here&apos;s an <code>-fx</code> handler which counts up to some number in chunks:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-fx</span> 
+  <span class="hljs-symbol">:count-to</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> 
+    [{db <span class="hljs-symbol">:db</span>} [_ first-time so-far finish-at]]
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> first-time
+      <span class="hljs-comment">;; We are at the beginning, so:</span>
+      <span class="hljs-comment">;;     - modify db, causing popup of Modal saying &quot;Working ...&quot;</span>
+      <span class="hljs-comment">;;     - begin iterative dispatch. Give initial version of &quot;so-far&quot;</span>
+      {<span class="hljs-symbol">:dispatch</span> [<span class="hljs-symbol">:count-to</span> <span class="hljs-literal">false</span> {<span class="hljs-symbol">:counter</span> <span class="hljs-number">0</span>} finish-at]  <span class="hljs-comment">;; dispatch to self</span>
+       <span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:we-are-working</span> <span class="hljs-literal">true</span>)}
+      (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">&gt;</span></span> (<span class="hljs-symbol">:counter</span> so-far) finish-at)
+        <span class="hljs-comment">;; We are finished:</span>
+        <span class="hljs-comment">;;  - take away the state which causes the modal to be up</span>
+        <span class="hljs-comment">;;  - store the result of the calculation</span>
+        {<span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> db
+                 (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> <span class="hljs-symbol">:fruits-of-labour</span> (<span class="hljs-symbol">:counter</span> so-far)) <span class="hljs-comment">;; remember the result</span>
+                 (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> <span class="hljs-symbol">:we-are-working</span> <span class="hljs-literal">false</span>))}             <span class="hljs-comment">;; no more modal</span>
+        <span class="hljs-comment">;; Still more work to do</span>
+        <span class="hljs-comment">;;   - run the calculation</span>
+        <span class="hljs-comment">;;   - redispatch, passing in new running state</span>
+        (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [new-so-far   (<span class="hljs-name">update</span> so-far <span class="hljs-symbol">:counter</span> inc)]
+          {<span class="hljs-symbol">:dispatch</span> [<span class="hljs-symbol">:count-to</span> <span class="hljs-literal">false</span> new-so-far finish-at]}))))
+</code></pre>
+<h3 id="why-does-a-redispatch-work">Why Does A Redispatch Work?</h3>
+<p>A <code>dispatched</code> event is handled asynchronously. It is queued
+and not actioned straight away. </p>
+<p>And here&apos;s the key: <strong>After handling current events, re-frame yields control
+to the browser</strong>, allowing it to render any pending DOM changes, etc. After 
+it is finished, the browser will hand control back to the re-frame router 
+loop, which will then handle any other queued events 
+which, in our case, would include the event we just dispatched to perform 
+the next chunk of work. </p>
+<p>When the next dispatch is handled, a next chunk of work will be done, and then another
+<code>dispatch</code> will happen. And so on. <code>dispatch</code> after <code>dispatch</code>. Chunk 
+after chunk. In 16ms increments if we are very careful (or some small amount 
+of time less than, say, 100ms). But with the browser getting a look-in after each iteration.</p>
+<h3 id="variations">Variations</h3>
+<p>As we go, the handler could be updating some value in <code>app-db</code> which indicates 
+progress, and this state would then be rendered into the UI.</p>
+<p>At a certain point, when all the work is done, the handler will likely put the
+fruits of its computational labour into <code>app-db</code> and clear any flags which might, for example,
+cause a modal dialog to be showing progress.  And the process would then be done.</p>
+<h3 id="cancel-button">Cancel Button</h3>
+<p>It is a flexible pattern.  For example, it can be tweaked to handle a &quot;Cancel&apos; button ...</p>
+<p>If there was a &#x201C;Cancel&#x201D; button to be clicked, we might 
+<code>(dispatch [:cancel-it])</code> and then have this event&#x2019;s handler tweak the <code>app-db</code>
+by adding <code>:abandonment-required</code> flags. When a chunk-processing-handler
+next begins, it could check for this <code>:abandonment-required</code> flag, and,
+if found, stop the CPU intensive process (and clear the abandonment flags).<br>When the abandonment-flags
+are set, the UI could show &quot;Abandoning process ...&quot; and thus appear responsive 
+to the user&apos;s click on &#x201C;Cancel&#x201D;.</p>
+<p>That&apos;s just one approach. You can adapt the pattern as necessary. </p>
+<h3 id="further-notes">Further Notes</h3>
+<p>Going to this trouble is completely unnecessary if the long running 
+task involves I/O (GET, POST, HTML5 database action?) because the 
+browser will handle I/O in another thread and give UI activities plenty of look in. </p>
+<p>You only need to go to this trouble if it is your code which is 
+hogging the CPU.  </p>
+<h2 id="forcing-a-one-off-render">Forcing A One Off Render</h2>
+<p>Imagine you have a process which takes, say, 5 seconds, and chunking 
+is just too much effort.</p>
+<p>You lazily decide to leave the UI unresponsive for that short period.<br>Except, 
+you aren&apos;t totally lazy.  If there was a button which kicked off 
+this 5 second process, and the user clicks it, you&#x2019;d like the UI to 
+show a response. Perhaps it could show  a modal popup thing saying 
+&#x201C;Doing X for you&#x201D;. </p>
+<p>At this point, you still have a small problem to solve. You want 
+the UI to show your modal message before you then hog the CPU for 
+5 seconds.</p>
+<p>Updating the UI means altering <code>app-db</code>.  Remember, the UI is a 
+function of the data in <code>app-db</code>. Only changes to <code>app-db</code> cause UI 
+changes. </p>
+<p>So, to show that Modal, you&#x2019;ll need to <code>assoc</code> some value into <code>app-db</code> 
+and have that new value change what is rendered in your reagent components.</p>
+<p>You might be tempted to do this: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>
+  <span class="hljs-symbol">:process-x</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span>
+   [db event-v]
+   (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:processing-X</span>  <span class="hljs-literal">true</span>)    <span class="hljs-comment">;; hog the CPU</span>
+   (<span class="hljs-name">do-long-process-x</span>)))    <span class="hljs-comment">;; update state, so reagent components render a modal</span>
+</code></pre>
+<p>But that is just plain wrong. 
+That <code>assoc</code> into <code>db</code> is not returned (and it must be for a <code>-db</code> handler).<br>And, even if that did somehow work, 
+then you continue hogging the thread with <code>do-long-process-x</code>.  There&apos;s no 
+chance for any UI updates because the handler never gives up control. This 
+handler owns the thread right through.</p>
+<p>Ahhh, you think.  I know what to do!  I&apos;ll use that pattern I read 
+about in the Wiki, and <code>re-dispatch</code> within an<code>-fx</code> handler: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-fx</span>
+  <span class="hljs-symbol">:process-x</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> 
+    [{db <span class="hljs-symbol">:db</span>} event-v]
+    {<span class="hljs-symbol">:dispatch</span>  [<span class="hljs-symbol">:do-work-process-x</span>]   <span class="hljs-comment">;; do processing later, give CPU back to browser.     </span>
+     <span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span>  db  <span class="hljs-symbol">:processing-X</span> <span class="hljs-literal">true</span>)})) <span class="hljs-comment">;; ao the modal gets rendered</span>
+
+(<span class="hljs-name">re-frame.core/reg-event-db</span>
+  <span class="hljs-symbol">:do-work-process-x</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]
+    (<span class="hljs-name">do-long-process-x</span> db)))   <span class="hljs-comment">;; return a new db, presumably containing work done</span>
+</code></pre>
+<p>So close.  But it still won&#x2019;t work. There&apos;s a little wrinkle.</p>
+<p>That event handler for <code>:process-x</code> will indeed give back control 
+to the browser. BUT, because of the way reagent works, that <code>assoc</code> on <code>db</code> 
+won&apos;t trigger DOM updates until the next animation frame runs, which is 16ms away.  </p>
+<p>So, you will be yielding control to the browser, but for next 16ms 
+there won&apos;t appear to be anything to do.  And, by then, your CPU hogging 
+code will have got control back, and will keep control for the next 5 
+seconds. That nice little Dialog telling you the button was clicked and 
+action is being taken won&apos;t show.</p>
+<p>In these kinds of cases, where you are only going to give the UI 
+<strong>one chance to update</strong> (not a repeated chances every few milli seconds), 
+then you had better be sure the DOM is fully synced. </p>
+<p>To do this, you put meta data on the event being dispatched:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-fx</span>
+  <span class="hljs-symbol">:process-x</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> 
+    [{db <span class="hljs-symbol">:db</span>} event-v]
+    {<span class="hljs-symbol">:dispatch</span>  ^<span class="hljs-symbol">:flush-dom</span> [<span class="hljs-symbol">:do-work-process-x</span>]   <span class="hljs-comment">;; &lt;--- NOW WITH METADATA         </span>
+     <span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span>  db  <span class="hljs-symbol">:processing-X</span> <span class="hljs-literal">true</span>)}))  <span class="hljs-comment">;; ao the modal gets rendered</span>
+</code></pre>
+<p>Notice the <code>^:flush-dom</code> metadata on the event being dispatched.  Use 
+that when you want the UI to be fully updated before the event dispatch 
+is handled. </p>
+<p>You only need this technique when you: </p>
+<ol>
+<li>want the DOM to be fully updated</li>
+<li>because you are going to hog the CPU for a while and not give it back. One chunk of work.</li>
+</ol>
+<p>If you handle via multiple chunks you don&apos;t have to do this, because 
+you are repeatedly handing back control to the browser/UI.  Its just 
+when you are going to tie up the CPU for a one, longish chunk. </p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Performance-Problems.html" class="navigation navigation-prev " aria-label="Previous page: Eek! Performance Problems">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Using-Stateful-JS-Components.html" class="navigation navigation-next " aria-label="Next page: Using Stateful JS Components">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Solve the CPU hog problem","level":"10.4","depth":1,"next":{"title":"Using Stateful JS Components","level":"10.5","depth":1,"path":"Using-Stateful-JS-Components.md","ref":"Using-Stateful-JS-Components.md","articles":[]},"previous":{"title":"Eek! Performance Problems","level":"10.3","depth":1,"path":"Performance-Problems.md","ref":"Performance-Problems.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Solve-the-CPU-hog-problem.md","mtime":"2017-09-21T10:24:52.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1055 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Effectful Handlers · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Interceptors.html" />
+    
+    
+    <link rel="prev" href="EventHandlingInfographic.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Effectful Handlers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="effectful-handlers">Effectful Handlers</h2>
+<p>This tutorial shows you how to implement pure event handlers that side-effect. 
+Yes, a surprising claim.</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#events-happen">Events Happen</a></li>
+<li><a href="#handling-the-happening">Handling The Happening</a></li>
+<li><a href="#your-handling">Your Handling</a></li>
+<li><a href="#90%25-solution">90% Solution</a></li>
+<li><a href="#bad-why">Bad, Why?</a></li>
+<li><a href="#the-2nd-kind-of-problem">The 2nd Kind Of Problem</a></li>
+<li><a href="#effects-and-coeffects">Effects And Coeffects</a></li>
+<li><a href="#why-does-this-happen">Why Does This Happen?</a></li>
+<li><a href="#doing-vs-causing">Doing vs Causing</a></li>
+<li><a href="#et-tu-react">Et tu, React?</a></li>
+<li><a href="#pattern-structure">Pattern Structure</a></li>
+<li><a href="#effects-the-two-step-plan">Effects: The Two Step Plan</a></li>
+<li><a href="#step-1-of-plan">Step 1 Of Plan</a></li>
+<li><a href="#another-example">Another Example</a></li>
+<li><a href="#the-coeffects">The Coeffects</a></li>
+<li><a href="#variations-on-a-theme">Variations On A Theme</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h3 id="events-happen">Events Happen</h3>
+<p>Events &quot;happen&quot; when they are dispatched.</p>
+<p>So, this makes an event happen: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:repair-ming-vase</span> <span class="hljs-literal">true</span>])
+</code></pre>
+<p>Events are normally triggered by an external agent: the user clicks a button, or a server-pushed 
+message arrives on a websocket.   </p>
+<h3 id="handling-the-happening">Handling The Happening</h3>
+<p>Once dispatched, an event must be &quot;handled&quot; - which means it must be processed or actioned. </p>
+<p>Events are mutative by nature. If your application is in one state before an 
+event is processed, it will be in a different state afterwards.</p>
+<p>And that state change is very desirable. Without the state change our 
+application can&apos;t incorporate that button click, or the newly arrived 
+websocket message. Without mutation, an app would just sit there, stuck. </p>
+<p>State change is how an application &quot;moves forward&quot; - how it does its job.  Useful!</p>
+<p>On the other hand, control logic and state mutation tend to be the most 
+complex and error prone part of an app.</p>
+<h3 id="your-handling">Your Handling</h3>
+<p>To help wrangle this potential complexity, re-frame&apos;s introduction 
+provided you with a simple programming model.</p>
+<p>It said you should call <code>reg-event-db</code> to associate an event id, 
+with a function to do the handling: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>        <span class="hljs-comment">;; &lt;-- call this to register a handler</span>
+    <span class="hljs-symbol">:set-flag</span>                      <span class="hljs-comment">;; this is an event id </span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ new-value]]          <span class="hljs-comment">;; this function does the handling </span>
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> new-value)))
+</code></pre>
+<p>The function you register, handles events with a given <code>id</code>.  </p>
+<p>And that handler <code>fn</code> is expected to be pure. Given the 
+value in <code>app-db</code> as the first argument, and the event (vector)
+as the second argument, it is expected to provide a new value for <code>app-db</code>. </p>
+<p>Data in, a computation and data out. Pure.  </p>
+<h3 id="90-solution">90% Solution</h3>
+<p>This paradigm provides a lovely solution 90% of the time, but there are times 
+when it isn&apos;t enough. </p>
+<p>Here&apos;s an example from the messy 10%. To get its job done, this handler has to side effect: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ bool]]
+       (<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:do-something-else</span> <span class="hljs-number">3</span>])    <span class="hljs-comment">;; oops, side-effect</span>
+       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:send-spam</span> new-val)))
+</code></pre>
+<p>That <code>dispatch</code> queues up another event to be processed. It changes the world.</p>
+<p>Just to be clear, this code works.  The handler returns a new version of <code>db</code>, so tick,
+and that <code>dispatch</code> will itself be &quot;handled&quot; asynchronously
+very shortly after this handler finishes, double tick.</p>
+<p>So, you can &quot;get away with it&quot;.  But it ain&apos;t pure.</p>
+<p>And here&apos;s more carnage:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ a]]
+       (<span class="hljs-name">GET</span> <span class="hljs-string">&quot;http://json.my-endpoint.com/blah&quot;</span>   <span class="hljs-comment">;; dirty great big side-effect</span>
+            {<span class="hljs-symbol">:handler</span>       #(<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:process-response</span> %<span class="hljs-number">1</span>])
+             <span class="hljs-symbol">:error-handler</span> #(<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:bad-response</span> %<span class="hljs-number">1</span>])})  
+       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>)))
+</code></pre>
+<p>Again, this approach will work. But that dirty great big side-effect doesn&apos;t come 
+for free. It&apos;s like a muddy monster truck has shown up in our field of white tulips.</p>
+<h3 id="bad-why">Bad, Why?</h3>
+<p>The moment we stop writing pure functions there are well documented 
+consequences:</p>
+<ol>
+<li>Cognitive load for the function&apos;s later readers goes up because they can no longer reason locally.  </li>
+<li>Testing becomes more difficult and involves &quot;mocking&quot;.  How do we test that the http GET above is 
+using the right URL?  &quot;mocking&quot; should be mocked. It is a bad omen.</li>
+<li>And event replay-ability is lost.</li>
+</ol>
+<p>Regarding the 3rd point above, a re-frame application proceeds step by step, like a reduce. From the README: </p>
+<blockquote>
+<p>at any one time, the value in app-db is the result of performing a reduce over the entire 
+collection of events dispatched in the app up until that time. The combining 
+function for this reduce is the set of registered event handlers.</p>
+</blockquote>
+<p>Such a collection of events is replay-able which is a dream for debugging and testing. But only
+when all the handlers are pure. Handlers with side-effects (like that HTTP GET, or the <code>dispatch</code>) pollute the 
+replay, inserting extra events into it, etc., which ruins the process. </p>
+<h3 id="the-2nd-kind-of-problem">The 2nd Kind Of Problem</h3>
+<p>And there&apos;s the other kind of purity problem:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:load-localstore</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]
+     (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [val (<span class="hljs-name">js-&gt;clj</span> (<span class="hljs-name">.getItem</span> js/localStorage <span class="hljs-string">&quot;defaults-key&quot;</span>))]  <span class="hljs-comment">;; &lt;-- Problem</span>
+       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:defaults</span> val))))
+</code></pre>
+<p>You&apos;ll notice the event handler obtains data from LocalStore.</p>
+<p>Although this handler has no side effect - it doesn&apos;t need to change the world - that action of 
+obtaining data from somewhere other than its arguments, means it isn&apos;t pure. </p>
+<h3 id="effects-and-coeffects">Effects And Coeffects</h3>
+<p>When striving for pure event handlers <a href="http://tomasp.net/blog/2014/why-coeffects-matter/" target="_blank">there are two considerations</a>:</p>
+<ul>
+<li><strong>Effects</strong> - what your event handler does to the world  (aka side-effects)</li>
+<li><strong>Coeffects</strong> - the data your event handler requires from the world in order 
+to do its computation (aka <a href="http://blog.jenkster.com/2015/12/what-is-functional-programming.html" target="_blank">side-causes</a>)</li>
+</ul>
+<p>We&apos;ll need a solution for both.</p>
+<h3 id="why-does-this-happen">Why Does This Happen?</h3>
+<p>It is inevitable that, say, 10% of your event handlers have effects and coeffects.</p>
+<p>They have to implement the control logic of your re-frame app, which 
+means dealing with the outside, mutative world of servers, databases, 
+window.location, LocalStore, cookies, etc.</p>
+<p>There&apos;s just no getting away from living in a mutative world, which sounds pretty ominous. Is that it? Are we doomed to impurity?</p>
+<p>Well, luckily a small twist in the tale makes a profound difference. We 
+will look at side-effects first. Instead of creating event handlers
+which <em>do side-effects</em>, we&apos;ll instead get them to <em>cause side-effects</em>.</p>
+<h3 id="doing-vs-causing">Doing vs Causing</h3>
+<p>I proudly claim that this event handler is pure:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>)))
+</code></pre>
+<p>Takes a <code>db</code> value, computes and returns a <code>db</code> value. No coeffects or effects. Yep, that&apos;s Pure!</p>
+<p>Yes, all true, but ... this purity is only possible because re-frame is doing 
+the necessary side-effecting.</p>
+<p>Wait on.  What &quot;necessary side-effecting&quot;?</p>
+<p>Well, application state is stored in <code>app-db</code>, right?  And it is a ratom. And after 
+each event handler runs, it must be <code>reset!</code> to the newly returned 
+value. Notice <code>reset!</code>.   That, right there, is the &quot;necessary side effecting&quot;. </p>
+<p>We get to live in our ascetic functional world because re-frame is 
+looking after the &quot;necessary side-effects&quot; on <code>app-db</code>.</p>
+<h3 id="et-tu-react">Et tu, React?</h3>
+<p>Turns out it&apos;s the same pattern with Reagent/React.</p>
+<p>We get to write a nice pure component, like:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> say-hi
+  [name]
+  [<span class="hljs-symbol">:div</span> <span class="hljs-string">&quot;Hello &quot;</span> name])
+</code></pre>
+<p>and Reagent/React mutates the DOM for us. The framework is looking 
+after the &quot;necessary side-effects&quot;.</p>
+<h3 id="pattern-structure">Pattern Structure</h3>
+<p>Pause and look back at <code>say-hi</code>. I&apos;d like you to view it through the 
+following lens:  it is a pure function which <strong>returns a description 
+of the side-effects required</strong>. It says: add a div element to the DOM.</p>
+<p>Notice that the description is declarative. We don&apos;t tell React how to do it.</p>
+<p>Notice also that it is data. Hiccup is just vectors and maps.</p>
+<p>This is a big, important concept.  While we can&apos;t get away from certain side-effects, we can 
+program using pure functions which <strong>describe side-effects, declaratively, in data</strong> and 
+let the backing framework look after the &quot;doing&quot; of them. Efficiently. Discreetly.</p>
+<p>Let&apos;s use this pattern to solve the side-effecting event-handler problem.</p>
+<h3 id="effects-the-two-step-plan">Effects: The Two Step Plan</h3>
+<p>From here, two steps:</p>
+<ol>
+<li>Work out how event handlers can declaratively describe side-effects, in data.</li>
+<li>Work out how re-frame can do the &quot;necessary side-effecting&quot;. Efficiently and discreetly.</li>
+</ol>
+<h3 id="step-1-of-plan">Step 1 Of Plan</h3>
+<p>So, how would it look if event handlers returned side-effects, declaratively, in data?</p>
+<p>Here is an impure, side effecting handler:   </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ a]]
+       (<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:do-something-else</span> <span class="hljs-number">3</span>])    <span class="hljs-comment">;; &lt;-- Eeek, side-effect</span>
+       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>)))
+</code></pre>
+<p>Here it is re-written so as to be pure: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>                              <span class="hljs-comment">;; &lt;1&gt; </span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [{<span class="hljs-symbol">:keys</span> [db]} [_ a]]                <span class="hljs-comment">;; &lt;2&gt; </span>
+      {<span class="hljs-symbol">:db</span>  (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>)          <span class="hljs-comment">;; &lt;3&gt; </span>
+       <span class="hljs-symbol">:dispatch</span> [<span class="hljs-symbol">:do-something-else</span> <span class="hljs-number">3</span>]}))
+</code></pre>
+<p>Notes: <br>
+<em><1></1></em> we&apos;re using <code>reg-event-fx</code> instead of <code>reg-event-db</code> to register  (that&apos;s <code>-db</code> vs <code>-fx</code>) <br>
+<em><2></2></em> the first parameter is no longer just <code>db</code>.  It is a map from which 
+<a href="http://clojure.org/guides/destructuring" target="_blank">we are destructuring db</a>, i.e.
+it is a map which contains a <code>:db</code> key. <br>
+<em><3></3></em> The handler is returning a data structure (map) which describes two side-effects:</p>
+<ul>
+<li>a change to application state, via the <code>:db</code> key</li>
+<li>a further event, via the <code>:dispatch</code> key  </li>
+</ul>
+<p>Above, the impure handler <strong>did</strong> a <code>dispatch</code> side-effect, while the pure handler <strong>described</strong> 
+a <code>dispatch</code> side-effect.</p>
+<h3 id="another-example">Another Example</h3>
+<p>The impure way:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ a]]
+       (<span class="hljs-name">GET</span> <span class="hljs-string">&quot;http://json.my-endpoint.com/blah&quot;</span>   <span class="hljs-comment">;; dirty great big side-effect</span>
+            {<span class="hljs-symbol">:handler</span>       #(<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:process-response</span> %<span class="hljs-number">1</span>])
+             <span class="hljs-symbol">:error-handler</span> #(<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:bad-response</span> %<span class="hljs-number">1</span>])})  
+       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>)))
+</code></pre>
+<p>the pure, descriptive alternative:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [{<span class="hljs-symbol">:keys</span> [db]} [_ a]]
+       {<span class="hljs-symbol">:http</span> {<span class="hljs-symbol">:method</span> <span class="hljs-symbol">:get</span>
+               <span class="hljs-symbol">:url</span>    <span class="hljs-string">&quot;http://json.my-endpoint.com/blah&quot;</span>
+               <span class="hljs-symbol">:on-success</span>  [<span class="hljs-symbol">:process-blah-response</span>]
+               <span class="hljs-symbol">:on-fail</span>     [<span class="hljs-symbol">:failed-blah</span>]}
+        <span class="hljs-symbol">:db</span>   (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>)}))
+</code></pre>
+<p>Again, the old way <strong>did</strong> a side-effect (Booo!) and the new way <strong>describes</strong>, declaratively,
+in data, the side-effects required (Yaaa!). </p>
+<p>More on side effects in a minute, but let&apos;s double back to coeffects.</p>
+<h3 id="the-coeffects">The Coeffects</h3>
+<p>So far we&apos;ve written our new style <code>-fx</code> handlers like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [{<span class="hljs-symbol">:keys</span> [db]} event]   <span class="hljs-comment">;; &lt;--  destructuring to get db</span>
+       { ... }))
+</code></pre>
+<p>It is now time to name that first argument:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>
+   <span class="hljs-symbol">:my-event</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx event]       <span class="hljs-comment">;;  &lt;--- thy name be cofx</span>
+       { ... }))
+</code></pre>
+<p>When you use the <code>-fx</code> form of registration, the first argument 
+of your handler will be a map of coeffects which we name <code>cofx</code>.  </p>
+<p>In that map will be the complete set of &quot;inputs&quot; required by your function.  The complete 
+set of computational resources (data) needed to perform its computation. But how?
+This will be explained in an upcoming tutorial, I promise, but for the moment, 
+take it as a magical given. </p>
+<p>One of the keys in <code>cofx</code> will likely be <code>:db</code> and that will be the value of <code>app-db</code>. </p>
+<p>Remember this impure handler from before:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>            <span class="hljs-comment">;;  a -db registration</span>
+ <span class="hljs-symbol">:load-localstore</span>
+ (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]              <span class="hljs-comment">;; db first argument </span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [defaults (<span class="hljs-name">js-&gt;clj</span> (<span class="hljs-name">.getItem</span> js/localStorage <span class="hljs-string">&quot;defaults-key&quot;</span>))]  <span class="hljs-comment">;; &lt;--  Eeek!!</span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:defaults</span> defaults))))
+</code></pre>
+<p>It was impure because it obtained an input from other than its arguments. 
+We&apos;d now rewrite it as a pure handler, like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>             <span class="hljs-comment">;; notice the -fx</span>
+   <span class="hljs-symbol">:load-localstore</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx  _]          <span class="hljs-comment">;; cofx is a map containing inputs</span>
+     (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [defaults (<span class="hljs-symbol">:local-store</span> cofx)]  <span class="hljs-comment">;; &lt;--  use it here</span>
+       {<span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> (<span class="hljs-symbol">:db</span> cofx) <span class="hljs-symbol">:defaults</span> defaults)})))  <span class="hljs-comment">;; returns effects map</span>
+</code></pre>
+<p>So, by some magic, not yet revealed, LocalStore will be queried before 
+this handler runs and the required value from it will be placed into 
+<code>cofx</code> under the key <code>:localstore</code> for the handler to use.</p>
+<p>That process leaves the handler itself pure because it only sources 
+data from arguments.</p>
+<h3 id="variations-on-a-theme">Variations On A Theme</h3>
+<p><code>-db</code> handlers and <code>-fx</code> handlers are conceptually the same. They only differ numerically.</p>
+<p><code>-db</code> handlers take <strong>one</strong> coeffect called <code>db</code>, and they return only <strong>one</strong>  effect (db again). </p>
+<p>Whereas <code>-fx</code> handlers take potentially <strong>many</strong> coeffects (a map of them) and they return 
+potentially <strong>many</strong> effects (a map of them). So, One vs Many. </p>
+<p>Just to be clear, the following two handlers achieve the same thing:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:set-flag</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ new-value]]
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> new-value)))
+</code></pre>
+<p>vs</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>
+   <span class="hljs-symbol">:set-flag</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx [_ new-value]]
+      {<span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> (<span class="hljs-symbol">:db</span> cofx) <span class="hljs-symbol">:flag</span> new-value)}))
+</code></pre>
+<p>Obviously the <code>-db</code> variation is simpler and you&apos;d use it whenever you 
+can. The <code>-fx</code> version is more flexible, so it will sometimes have its place.   </p>
+<h3 id="summary">Summary</h3>
+<p>90% of the time, simple <code>-db</code> handlers are the right tool to use.</p>
+<p>But about 10% of the time, our handlers need additional inputs (coeffects) or they need to 
+cause additional side-effects (effects).  That&apos;s when you reach for <code>-fx</code> handlers. </p>
+<p><code>-fx</code> handlers allow us to return effects, declaratively in data. </p>
+<p>In the next tutorial, we&apos;ll shine a light on <code>interceptors</code> which are
+the mechanism by which  event handlers are executed. That knowledge will give us a springboard 
+to then, as a next step, better understand coeffects and effects. We&apos;ll soon be writing our own.</p>
+<hr>
+<p>Previous:  <a href="EventHandlingInfographic.html">Infographic Overview</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Up:  <a href="./">Index</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Next:  <a href="Interceptors.html">Interceptors</a>  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="EventHandlingInfographic.html" class="navigation navigation-prev " aria-label="Previous page: Infographic Overview">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Interceptors.html" class="navigation navigation-next " aria-label="Next page: Interceptors">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Effectful Handlers","level":"4.2","depth":1,"next":{"title":"Interceptors","level":"4.3","depth":1,"path":"Interceptors.md","ref":"Interceptors.md","articles":[]},"previous":{"title":"Infographic Overview","level":"4.1","depth":1,"path":"EventHandlingInfographic.md","ref":"EventHandlingInfographic.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"EffectfulHandlers.md","mtime":"2017-09-21T10:24:52.721Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

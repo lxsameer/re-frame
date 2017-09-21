@@ -1,0 +1,929 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Debugging Event Handlers · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Debugging.html" />
+    
+    
+    <link rel="prev" href="Subscribing-To-External-Data.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter active" data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Debugging Event Handlers</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="debugging-event-handlers">Debugging Event Handlers</h2>
+<p>This page describes techniques for debugging re-frame&apos;s event handlers.</p>
+<p>Event handlers are quite central to a re-frame app.  Only event handlers 
+can update <code>app-db</code> to &quot;step&quot; an application &quot;forward&quot; from one state
+to the next.</p>
+<h2 id="the-debug-interceptor">The <code>debug</code> Interceptor</h2>
+<p>You might wonder: is my event handler making the right changes to <code>app-db</code>?  </p>
+<p>During development, the built-in <code>re-frame.core/debug</code> interceptor can help. 
+It writes to <code>console.log</code>:</p>
+<ol>
+<li>the event being processed, for example:   <code>[:attempt-world-record true]</code></li>
+<li>the changes made to <code>db</code> by the handler in processing the event</li>
+</ol>
+<p><code>debug</code> uses <code>clojure.data/diff</code> to compare the value of <code>app-db</code> 
+before and after the handler ran, showing what changed. </p>
+<p><a href="https://clojuredocs.org/clojure.data/diff" target="_blank">clojure.data/diff returns a triple</a> 
+, the first two entries of which 
+<code>debug</code> will display in <code>console.log</code> (the 3rd says what has not changed and isn&apos;t interesting).</p>
+<p>The output produced by <code>clojure.data/diff</code> can take some getting used to, 
+but you should stick with it -- your effort will be rewarded.</p>
+<h3 id="using-debug">Using <code>debug</code></h3>
+<p>So, you will add this Interceptor like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>
+   <span class="hljs-symbol">:some-id</span>
+   [re-frame.core/debug]         <span class="hljs-comment">;;  &lt;----  added here! </span>
+   some-handler-fn)
+</code></pre>
+<p>Except, of course, we need to be more deft - we only want 
+<code>debug</code> in development builds. We don&apos;t 
+want the overhead of those <code>clojure.data/diff</code> calculations in production.
+So, this is better: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>
+   <span class="hljs-symbol">:some-id</span>
+   [(<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> <span class="hljs-comment">^boolean</span> goog.DEBUG re-frame.core/debug)]   <span class="hljs-comment">;;  &lt;----  conditional! </span>
+   some-handler-fn)
+</code></pre>
+<p><code>goog.DEBUG</code> is a compile time constant provided by the <code>Google Closure Compiler</code>. 
+It will be <code>true</code> when the build within <code>project.clj</code> is <code>:optimization :none</code> and <code>false</code>
+otherwise.</p>
+<p>Ha! I see a problem, you say.  In production, that <code>when</code> is going to 
+leave a <code>nil</code> in the interceptor vector. So the Interceptor vector will be <code>[nil]</code>.
+Surely that&apos;s a problem?  </p>
+<p>Well, actually, no it isn&apos;t. re-frame filters out any <code>nil</code> from interceptor vectors. </p>
+<h3 id="too-much-repetition---part-1">Too Much Repetition - Part 1</h3>
+<p>Each event handler has its own interceptor stack. </p>
+<p>That might be all very flexible, but does that mean we have to put this <code>debug</code> 
+business on every single handler?  That would be very repetitive. </p>
+<p>Yes, you will have to put it on each handler.  And, yes, that could be repetitive,  unless 
+you take some steps.</p>
+<p>One thing you can do is to define standard interceptors at the top of the <code>event.cljs</code> namespace:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> standard-interceptors  [(<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> <span class="hljs-comment">^boolean</span> goog.DEBUG debug)  another-interceptor])
+</code></pre>
+<p>And then, for any one event handler, the code would look like:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>
+   <span class="hljs-symbol">:some-id</span>
+   standard-interceptors        <span class="hljs-comment">;; &lt;--- use the common definition</span>
+   some-handler-fn)
+</code></pre>
+<p>or perhaps:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>
+   <span class="hljs-symbol">:some-id</span>
+   [standard-interceptors specific-interceptor]  <span class="hljs-comment">;; mix with something specific</span>
+   some-handler-fn)
+</code></pre>
+<p>So that <code>specific-interceptor</code> could be something required for just this one
+event handler, and it can be combined the standard ones.</p>
+<p>Wait on! &quot;I see a problem&quot;, you say.  <code>standard-interceptors</code> is a <code>vector</code>, and it
+is within another <code>vector</code> along side <code>specific-interceptor</code> - so that&apos;s
+nested vectors of interceptors!  </p>
+<p>No problem, re-frame uses <code>flatten</code> to take out all the nesting - the 
+result is a simple chain of interceptors. And, as we have discussed,
+<code>nil</code>s are removed.</p>
+<h2 id="3-checking-db-integrity">3. Checking DB Integrity</h2>
+<p>Always have a detailed schema for the data in <code>app-db</code>!</p>
+<p>Why?</p>
+<p><strong>First</strong>, schemas serve as invaluable documentation. When I come to 
+a new app, the first thing I want to look at is the underlying 
+information model - the schema of the data.  I hope it is well 
+commented and I expect it to be rigorous and complete, using 
+<a href="http://clojure.org/about/spec" target="_blank">Clojure spec</a>
+or, perhaps, <a href="https://github.com/Prismatic/schema" target="_blank">a Prismatic Schema</a>.</p>
+<p><strong>Second</strong> a good spec allows you to assert the integrity and correctness of 
+the data in <code>app-db</code>.  Because all the data is in one place, that means you 
+are asserting the integrity of ALL the data in your app, at one time. All of it.</p>
+<p>When should we do this?  Ideally, every time a change is made!</p>
+<p>Well, it turns out that only event handlers can change the value in
+<code>app-db</code>, so only an event handler could corrupt it. So, we&apos;d like to
+<strong>recheck the integrity of <code>app-db</code> immediately
+after <em>every</em> event handler has run</strong>.</p>
+<p>All of it, every time. This allows us to catch any errors very early, 
+easily assigning blame (to the rouge event handler).</p>
+<p>Schemas are typically put into <code>db.cljs</code> (see the todomvc example in the re-frame repo). Here&apos;s 
+an example using Prismatic Schema
+(although a more modern choice would be to use <a href="http://clojure.org/about/spec" target="_blank">Clojure spec</a>):</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">ns</span></span> my.namespace.db
+  (<span class="hljs-symbol">:require</span>
+    [schema.core <span class="hljs-symbol">:as</span> s]))
+
+<span class="hljs-comment">;; As exactly as possible, describe the correct shape of app-db </span>
+<span class="hljs-comment">;; Add a lot of helpful comments. This will be an important resource</span>
+<span class="hljs-comment">;; for someone looking at you code for the first time.</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> schema           
+  {<span class="hljs-symbol">:a</span> {<span class="hljs-symbol">:b</span> s/Str
+       <span class="hljs-symbol">:c</span> s/Int}
+   <span class="hljs-symbol">:d</span> [{<span class="hljs-symbol">:e</span> s/Keyword
+        <span class="hljs-symbol">:f</span> [s/Num]}]})
+</code></pre>
+<p>And a function which will check a db value against that schema:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> valid-schema?
+  <span class="hljs-string">&quot;validate the given db, writing any problems to console.error&quot;</span>
+  [db]
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [res (<span class="hljs-name">s/check</span> schema db)]
+    (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name">some?</span> res)
+      (<span class="hljs-name">.error</span> js/console (<span class="hljs-name"><span class="hljs-builtin-name">str</span></span> <span class="hljs-string">&quot;schema problem: &quot;</span> res)))))
+</code></pre>
+<p>Now, let&apos;s organise for <code>valid-schema?</code> to be run <strong>after</strong> every handler. 
+We&apos;ll use the built-in  <code>after</code> Interceptor factory function:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> standard-interceptors [(<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> <span class="hljs-comment">^boolean</span> goog.DEBUG debug)
+                           (<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> <span class="hljs-comment">^boolean</span> goog.DEBUG (<span class="hljs-name">after</span> db/valid-schema?))]) <span class="hljs-comment">;; &lt;-- new</span>
+</code></pre>
+<p>Now, the instant a handler messes up the structure of <code>app-db</code> you&apos;ll be alerted.
+But this overhead won&apos;t be there in production.</p>
+<h3 id="too-much-repetition---part-2">Too Much Repetition - Part 2</h3>
+<p>Above, we discussed a way of &quot;factoring out&quot; common interceptors into <code>standard-interceptors</code>. </p>
+<p>There&apos;s an additional technique we can use to ensure that all event handlers get certain Interceptors: 
+you write a custom registration function -- a replacement for <code>reg-event-db</code> -- like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> my-reg-event-db          <span class="hljs-comment">;; alternative to reg-event-db</span>
+  ([id handler-fn]
+    (<span class="hljs-name">re-frame.core/reg-event-db</span> id standard-interceptors handler-fn))
+  ([id interceptors handler-fn]
+    (<span class="hljs-name">re-frame.core/reg-event-db</span>
+        id
+        [standard-interceptors interceptors]
+        handler-fn)))
+</code></pre>
+<p>Notice how this registration function inserts our standard interceptors every time.</p>
+<p>From now on, you can register your event handlers like this and know that the two standard Interceptors have been inserted:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">my-reg-event-db</span>      <span class="hljs-comment">;; &lt;-- adds std interceptors automatically</span>
+  <span class="hljs-symbol">:some-id</span> 
+  some-handler-fn)
+</code></pre>
+<h3 id="what-about-the--fx-variation">What about the -fx variation?</h3>
+<p>Above we created <code>my-reg-event-db</code> as a new registration function for <code>-db</code> handlers.
+Now, <code>-db</code> handlers take <code>db</code> and <code>event</code> arguments, and return a new <code>db</code>.
+So, they MUST return a new <code>db</code> value.   </p>
+<p>But what if we tried to do the same for <code>-fx</code> handlers which, instead, return 
+an <code>effects</code> map which may, or may not, contain a <code>:db</code>?  Our solution would 
+have to allow for the absence of a new <code>db</code> value (by doing no validity check, because nothing 
+was being changed). </p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> debug? <span class="hljs-comment">^boolean</span> goog.DEBUG)
+(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> standard-interceptors-fx
+  [(<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> debug?  debug)    <span class="hljs-comment">;; as before</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> debug? (<span class="hljs-name">after</span> #(<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> % (<span class="hljs-name">db/valid-schema?</span> %)))]) <span class="hljs-comment">;; &lt;-- different after</span>
+</code></pre>
+<p>and then:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> my-reg-event-fx          <span class="hljs-comment">;; alternative to reg-event-db</span>
+  ([id handler-fn]
+    (<span class="hljs-name">re-frame.core/reg-event-fx</span> id standard-interceptors-fx handler-fn))
+  ([id interceptors handler-fn]
+    (<span class="hljs-name">re-frame.core/reg-event-fx</span>
+        id
+        [standard-interceptors-fx interceptors]
+        handler-fn)))
+</code></pre>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Subscribing-To-External-Data.html" class="navigation navigation-prev " aria-label="Previous page: Subscribing to External Data">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Debugging.html" class="navigation navigation-next " aria-label="Next page: Debugging">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Debugging Event Handlers","level":"9.1","depth":1,"next":{"title":"Debugging","level":"9.2","depth":1,"path":"Debugging.md","ref":"Debugging.md","articles":[]},"previous":{"title":"Subscribing to External Data","level":"8.3","depth":1,"path":"Subscribing-To-External-Data.md","ref":"Subscribing-To-External-Data.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Debugging-Event-Handlers.md","mtime":"2017-09-21T10:24:52.721Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

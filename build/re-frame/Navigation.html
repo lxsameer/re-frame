@@ -1,0 +1,811 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Navigation · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Namespaced-Keywords.html" />
+    
+    
+    <link rel="prev" href="Basic-App-Structure.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Navigation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#what-about-navigation">What About Navigation?</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="what-about-navigation">What About Navigation?</h2>
+<p>How do I switch between different panels of a larger app?</p>
+<p>Your <code>app-db</code> could have an <code>:active-panel</code> key containing an id for the panel being displayed.</p>
+<p>When the user does something navigation-ish (selects a tab, a dropdown or something which changes the active panel), then the associated event and dispatch look like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame/reg-event-db</span>
+  <span class="hljs-symbol">:set-active-panel</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ value]]
+    (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:active-panel</span> value)))
+
+(<span class="hljs-name">re-frame/dispatch</span> 
+  [<span class="hljs-symbol">:set-active-panel</span> <span class="hljs-symbol">:panel1</span>])
+</code></pre>
+<p>A high level reagent view has a subscription to :active-panel and will switch to the associated panel.</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame/reg-sub</span>
+  <span class="hljs-symbol">:active-panel</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]
+    (<span class="hljs-symbol">:active-panel</span> db)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> panel1
+ []
+ [<span class="hljs-symbol">:div</span>  {<span class="hljs-symbol">:on-click</span> #(<span class="hljs-name">re-frame/dispatch</span> [<span class="hljs-symbol">:set-active-panel</span> <span class="hljs-symbol">:panel2</span>])}
+        <span class="hljs-string">&quot;Here&quot;</span> ])
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> panel2
+ []
+ [<span class="hljs-symbol">:div</span> <span class="hljs-string">&quot;There&quot;</span>])
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> high-level-view 
+  []
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [active  (<span class="hljs-name">re-frame/subscribe</span> [<span class="hljs-symbol">:active-panel</span>])]
+    (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> []
+      [<span class="hljs-symbol">:div</span>
+       [<span class="hljs-symbol">:div.title</span>   <span class="hljs-string">&quot;Heading&quot;</span>]
+       (<span class="hljs-name"><span class="hljs-builtin-name">condp</span></span> = @active                <span class="hljs-comment">;; or you could look up in a map</span>
+         <span class="hljs-symbol">:panel1</span>   [panel1]
+         <span class="hljs-symbol">:panel2</span>   [panel2])])))
+</code></pre>
+<p>Continue to <a href="Namespaced-Keywords.html">Namespaced Keywords</a> to reduce clashes on ids.</p>
+<hr>
+<p>Previous:  <a href="Basic-App-Structure.html">Basic App Structure</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Up:  <a href="./">Index</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Next:  <a href="Namespaced-Keywords.html">Namespaced Keywords</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Basic-App-Structure.html" class="navigation navigation-prev " aria-label="Previous page: Basic App Structure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Namespaced-Keywords.html" class="navigation navigation-next " aria-label="Next page: Namespaced Keywords">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Navigation","level":"7.2","depth":1,"next":{"title":"Namespaced Keywords","level":"7.3","depth":1,"path":"Namespaced-Keywords.md","ref":"Namespaced-Keywords.md","articles":[]},"previous":{"title":"Basic App Structure","level":"7.1","depth":1,"path":"Basic-App-Structure.md","ref":"Basic-App-Structure.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Navigation.md","mtime":"2017-09-21T10:24:52.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

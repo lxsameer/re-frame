@@ -1,0 +1,11 @@
+{
+  "title": "re-frame",
+  "description": "Documentation of re-frame framework",
+  "language": "en",
+  "root": "./",
+  "structure": {
+    "summary": "README.md"
+
+  }
+
+}

@@ -1,0 +1,845 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Using Stateful JS Components · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="The-re-frame-logo.html" />
+    
+    
+    <link rel="prev" href="Solve-the-CPU-hog-problem.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Using Stateful JS Components</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="using-stateful-js-components">Using Stateful JS Components</h2>
+<p>You know what&apos;s good for you, and you know what&apos;s right.  But it
+doesn&apos;t matter - the wickedness of the temptation is too much. </p>
+<p>The JS world is brimming with shiny component baubles: D3, 
+Google Maps, Chosen, etc.  </p>
+<p>But they are salaciously stateful and mutative.  And, you, 
+raised in a pure, functional home, with caring, immutable parents, 
+know they are wrong.  But, my, how you still yearn for the sweet 
+thrill of that forbidden fruit. </p>
+<p>I won&apos;t tell, if you don&apos;t.  But careful plans must be made  ... </p>
+<h3 id="the-overall-plan">The overall plan</h3>
+<p>To use a stateful js component, you&apos;ll need to write two Reagent components:</p>
+<ul>
+<li>an <strong>outer component</strong> responsible for sourcing data via a subscription or r/atom or cursor, etc.  </li>
+<li>an <strong>inner component</strong> responsible for wrapping and manipulating the stateful JS component via lifecycle functions.  </li>
+</ul>
+<p>The pattern involves the outer component, which sources data, supplying this data to the inner component <strong>via props</strong>. </p>
+<h3 id="example-using-google-maps">Example Using Google Maps</h3>
+<pre><code class="lang-cljs">(defn gmap-inner []
+  (let [gmap    (atom nil)
+        options (clj-&gt;js {&quot;zoom&quot; 9})
+        update  (fn [comp]
+                  (let [{:keys [latitude longitude]} (reagent/props comp)
+                        latlng (js/google.maps.LatLng. latitude longitude)]
+                    (.setPosition (:marker @gmap) latlng)
+                    (.panTo (:map @gmap) latlng)))]
+
+    (reagent/create-class
+      {:reagent-render (fn []
+                         [:div
+                          [:h4 &quot;Map&quot;]
+                          [:div#map-canvas {:style {:height &quot;400px&quot;}}]])
+
+       :component-did-mount (fn [comp]
+                              (let [canvas  (.getElementById js/document &quot;map-canvas&quot;)
+                                    gm      (js/google.maps.Map. canvas options)
+                                    marker  (js/google.maps.Marker. (clj-&gt;js {:map gm :title &quot;Drone&quot;}))]
+                                (reset! gmap {:map gm :marker marker}))
+                              (update comp))
+
+       :component-did-update update
+       :display-name &quot;gmap-inner&quot;})))
+
+
+
+(defn gmap-outer []
+  (let [pos (subscribe [:current-position])]   ;; obtain the data
+    (fn []
+      [gmap-inner @pos])))
+</code></pre>
+<p>Notes:</p>
+<ul>
+<li><code>gmap-outer</code> obtains data via a subscription. It is quite simple - trivial almost.</li>
+<li>it then passes this data <strong>as a prop</strong>  to <code>gmap-inner</code>.  This inner component has the job of wrapping/managing the stateful js component (Gmap in our case above)</li>
+<li>when the data (delivered by the subscription) to the outer layer changes, the inner layer, <code>gmap-inner</code>, will be given a new prop - <code>@pos</code> in the case above.</li>
+<li>when the inner component is given new props, its entire set of lifecycle functions will be engaged. </li>
+<li>the renderer for the inner layer ALWAYS renders the same, minimal container hiccup for the component.  Even though the <code>props</code> have changed, the same hiccup is output. So it will appear to React as if nothing changes from one render to the next. No work to be done. React/Reagent will leave the DOM untouched. </li>
+<li>but this inner component has other lifecycle functions and this is where the real work is done.  </li>
+<li>for example, after the renderer is called (which ignores its props), <code>component-did-update</code> will be called. In this function, we don&apos;t ignore the props, and we use them to update/mutate the stateful JS component.  </li>
+<li>the props passed (in this case <code>@pos</code>) in must be a map, otherwise <code>(reagent/props comp)</code> will return nil.</li>
+</ul>
+<h3 id="pattern-discovery">Pattern Discovery</h3>
+<p>This pattern has been independently discovered by many. To my knowledge, 
+<a href="https://medium.com/@learnreact/container-components-c0e67432e005#.3ic1uipvu" target="_blank">this description of the Container/Component pattern</a>
+is the first time it was written up.</p>
+<h3 id="code-credit">Code Credit</h3>
+<p>The example gmaps code above was developed by @jhchabran in this gist:
+<a href="https://gist.github.com/jhchabran/e09883c3bc1b703a224d#file-2_google_map-cljs" target="_blank">https://gist.github.com/jhchabran/e09883c3bc1b703a224d#file-2_google_map-cljs</a></p>
+<h3 id="d3-examples">D3 Examples</h3>
+<p>D3 (from @zachcp): </p>
+<ul>
+<li>Blog Post: <a href="http://zachcp.org/blog/2015/reagent-d3/" target="_blank">http://zachcp.org/blog/2015/reagent-d3/</a></li>
+<li>Code: <a href="https://github.com/zachcp/simplecomponent" target="_blank">https://github.com/zachcp/simplecomponent</a></li>
+<li>Example: <a href="http://zachcp.github.io/simplecomponent/" target="_blank">http://zachcp.github.io/simplecomponent/</a></li>
+</ul>
+<p>A different take on using D3: 
+<a href="https://gadfly361.github.io/gadfly-blog/2016-10-22-d3-in-reagent.html" target="_blank">https://gadfly361.github.io/gadfly-blog/2016-10-22-d3-in-reagent.html</a></p>
+<h3 id="advanced-lifecycle-methods">Advanced Lifecycle Methods</h3>
+<p>If you mess around with lifecycle methods, you&apos;ll probably want to read Martin&apos;s explanations:
+<a href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html" target="_blank">https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html</a></p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Solve-the-CPU-hog-problem.html" class="navigation navigation-prev " aria-label="Previous page: Solve the CPU hog problem">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="The-re-frame-logo.html" class="navigation navigation-next " aria-label="Next page: The re-frame Logo">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Using Stateful JS Components","level":"10.5","depth":1,"next":{"title":"The re-frame Logo","level":"10.6","depth":1,"path":"The-re-frame-logo.md","ref":"The-re-frame-logo.md","articles":[]},"previous":{"title":"Solve the CPU hog problem","level":"10.4","depth":1,"path":"Solve-the-CPU-hog-problem.md","ref":"Solve-the-CPU-hog-problem.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Using-Stateful-JS-Components.md","mtime":"2017-09-21T10:24:52.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

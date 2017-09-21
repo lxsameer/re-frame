@@ -1,0 +1,1069 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Interceptors · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Effects.html" />
+    
+    
+    <link rel="prev" href="EffectfulHandlers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Interceptors</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="re-frame-interceptors">re-frame Interceptors</h2>
+<p>This tutorial explains re-frame Interceptors. By the end, you&apos;ll much
+better understand the mechanics of event handling. </p>
+<p>As you read this, refer back to the 3rd panel of the 
+<a href="EventHandlingInfographic.html">Infographic</a>.</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#why-interceptors">Why Interceptors?</a></li>
+<li><a href="#what-do-interceptors-do">What Do Interceptors Do?</a></li>
+<li><a href="#wait-i-know-that-pattern">Wait, I know That Pattern!</a></li>
+<li><a href="#whats-in-the-pipeline">What&apos;s In The Pipeline?</a></li>
+<li><a href="#show-me">Show Me</a></li>
+<li><a href="#handlers-are-interceptors-too">Handlers Are Interceptors Too</a></li>
+<li><a href="#executing-a-chain">Executing A Chain</a><ul>
+<li><a href="#the-links-of-the-chain">The Links Of The Chain</a></li>
+<li><a href="#what-is-context">What Is Context?</a></li>
+<li><a href="#self-modifying">Self Modifying</a></li>
+<li><a href="#credit">Credit</a></li>
+<li><a href="#write-an-interceptor">Write An Interceptor</a></li>
+<li><a href="#wrapping-handlers">Wrapping Handlers</a></li>
+</ul>
+</li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#appendix">Appendix</a><ul>
+<li><a href="#the-built-in-interceptors">The Built-in Interceptors</a></li>
+</ul>
+</li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="why-interceptors">Why Interceptors?</h2>
+<p>Two reasons.</p>
+<p><strong>First</strong>, we want simple event handlers.  </p>
+<p>Interceptors can look after &quot;cross-cutting&quot; concerns like undo, tracing and validation. 
+They help us to factor out commonality, hide complexity and introduce further steps into the &quot;Derived Data, 
+Flowing&quot; story promoted by re-frame. </p>
+<p>So, you&apos;ll want to use Interceptors because they solve problems, and help you to write nice code.  </p>
+<p><strong>Second</strong>, under the covers, Interceptors provide the mechanism by which 
+event handlers are executed (when you <code>dispatch</code>). They are a central concept.</p>
+<h2 id="what-do-interceptors-do">What Do Interceptors Do?</h2>
+<p>They wrap. </p>
+<p>Specifically, they wrap event handlers. </p>
+<p>Imagine your event handler is like a piece of ham. An interceptor would be
+like bread on either side of your ham, which makes a sandwich.</p>
+<p>And two Interceptors, in a chain, would be like you put another 
+pair of bread slices around the outside of the existing sandwich to make 
+a sandwich of the sandwich. Now it is a very thick sandwich. </p>
+<p>Interceptors wrap on both sides of a handler, layer after layer.</p>
+<h2 id="wait-i-know-that-pattern">Wait, I know That Pattern!</h2>
+<p>Interceptors implement middleware. But differently.</p>
+<p>Traditional middleware - often seen in web servers - creates a data 
+processing pipeline via the nested composition of higher order functions. 
+The result is a &quot;stack&quot; of functions. Data flows through this pipeline, 
+first forwards from one end to the other, and then backwards.</p>
+<p>Interceptors achieve the same outcome by assembling functions, as data, 
+in a collection (a chain, rather than a stack). Data can then be iteratively
+pipelined, first forwards through the functions in the chain, 
+and then backwards along the same chain. </p>
+<p>Because the interceptor pipeline is composed via data, rather than 
+higher order functions, it is a more flexible arrangement.  </p>
+<h2 id="whats-in-the-pipeline">What&apos;s In The Pipeline?</h2>
+<p>Data. It flows through the pipeline being progressively transformed. </p>
+<p>Fine. But what data?</p>
+<p>With a web server, the middleware &quot;stack&quot; progressively 
+transforms a <code>request</code> in one direction, and, then in the backwards 
+sweep, it progressively produces a <code>response</code>. </p>
+<p>In re-frame, the forwards sweep progressively creates the <code>coeffects</code> 
+(inputs to the event handler), while the backwards sweep processes the <code>effects</code>
+(outputs from the event handler).  </p>
+<p>I&apos;ll pause while you read that sentence again. That&apos;s the key 
+concept, right there. </p>
+<h2 id="show-me">Show Me</h2>
+<p>At the time when you register an event handler, you can provide a chain of interceptors too. </p>
+<p>Using a 3-arity registration function:</p>
+<pre><code class="lang-clj">(reg-event-db          
+   :some-id
+   [in1 in2]       ;; &lt;--- a chain of 2 interceptors  
+   (fn [db v]      ;; &lt;-- the handler here, as before
+      ....)))
+</code></pre>
+<blockquote>
+<p>Each Event Handler can have its own tailored interceptor chain, provided at registration-time. </p>
+</blockquote>
+<h2 id="handlers-are-interceptors-too">Handlers Are Interceptors Too</h2>
+<p>You might see that registration above as associating <code>:some-id</code> with 
+two things: (1) a chain of 2 interceptors <code>[in1 in2]</code>
+and (2) a handler.  </p>
+<p>Except, the handler is turned into an interceptor too (we&apos;ll see how shortly).</p>
+<p>So <code>:some-id</code> is only associated with one thing: a 3-chain of interceptors, 
+with the handler wrapped in an interceptor, called say <code>h</code>, and put on the 
+end of the other two: <code>[in1 in2 h]</code>.  </p>
+<p>Except, the registration function itself, <code>reg-event-db</code>, actually takes this 3-chain 
+and inserts its own standard interceptors, called say <code>std1</code> and <code>std2</code>
+(which do useful things, more soon) at the front,
+so <strong>ACTUALLY</strong>, there&apos;s about 5 interceptors in the chain: <code>[std1 std2 in1 in2 h]</code></p>
+<p>So, ultimately, that event registration associates the event id <code>:some-id</code> 
+with <strong>just</strong> a chain of interceptors. Nothing more.</p>
+<p>Later, when a <code>(dispatch [:some-id ...])</code> happens, that 5-chain of 
+interceptors will be &quot;executed&quot;.  And that&apos;s how an event gets handled. </p>
+<h2 id="executing-a-chain">Executing A Chain</h2>
+<h3 id="the-links-of-the-chain">The Links Of The Chain</h3>
+<p>Each interceptor has this form:</p>
+<pre><code class="lang-clj">{<span class="hljs-symbol">:id</span>      <span class="hljs-symbol">:something</span>             <span class="hljs-comment">;; decorative only</span>
+ <span class="hljs-symbol">:before</span>  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [context] ...)     <span class="hljs-comment">;; returns possibly modified context</span>
+ <span class="hljs-symbol">:after</span>   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [context] ...)}    <span class="hljs-comment">;; `identity` would be a noop</span>
+</code></pre>
+<p>That&apos;s essentially a map of two functions. Now imagine a vector of these maps - that&apos;s an interceptor chain.  </p>
+<p>Above we imagined an interceptor chain of <code>[std1 std2 in1 in2 h]</code>. Now we know that this is really
+a vector of 5 maps: <code>[{...} {...} {...} {...} {...}]</code>  where each of the 5 maps have 
+a <code>:before</code> and <code>:after</code> fn.</p>
+<p>Sometimes, the <code>:before</code> and <code>:after</code> fns are noops (think <code>identity</code>). </p>
+<p>To &quot;execute&quot; an interceptor chain:</p>
+<ol>
+<li>create a <code>context</code> (a map, described below)</li>
+<li>iterate forwards over the chain, calling the <code>:before</code> function on each interceptor</li>
+<li>iterate over the chain in the opposite direction calling the <code>:after</code> function on each interceptor</li>
+</ol>
+<p>Remember that the last interceptor in the chain is the handler itself (wrapped up to be the <code>:before</code>).</p>
+<p>That&apos;s it. That&apos;s how an event gets handled.</p>
+<h3 id="what-is-context">What Is Context?</h3>
+<p>Some data called a <code>context</code> is threaded through all the calls. </p>
+<p>This value is passed as the argument to every <code>:before</code> and <code>:after</code> 
+function and it is returned by each function, possibly modified. </p>
+<p>A <code>context</code> is a map with this structure: </p>
+<pre><code class="lang-clj">{<span class="hljs-symbol">:coeffects</span> {<span class="hljs-symbol">:event</span> [<span class="hljs-symbol">:some-id</span> <span class="hljs-symbol">:some-param</span>]
+             <span class="hljs-symbol">:db</span>    &lt;original contents of app-db&gt;}
+
+ <span class="hljs-symbol">:effects</span>   {<span class="hljs-symbol">:db</span>    &lt;new value for app-db&gt;
+             <span class="hljs-symbol">:dispatch</span>  [<span class="hljs-symbol">:an-event-id</span> <span class="hljs-symbol">:param1</span>]}
+
+ <span class="hljs-symbol">:queue</span>     &lt;a collection of further interceptors&gt;
+ <span class="hljs-symbol">:stack</span>     &lt;a collection of interceptors already walked&gt;}
+</code></pre>
+<p><code>context</code> has <code>:coeffects</code> and <code>:effects</code> which, if this was a web
+server, would be somewhat analogous to <code>request</code> and <code>response</code>
+respectively.</p>
+<p><code>:coeffects</code> will contain the inputs required by the event handler
+(sitting presumably on the end of the chain). So that&apos;s 
+data like the <code>:event</code> being processed, and the initial state of <code>db</code>.</p>
+<p>The handler-returned side effects are put into <code>:effects</code> including, 
+but not limited to, new values for <code>db</code>.</p>
+<p>The first few interceptors in a chain (inserted by <code>reg-event-db</code>) 
+have <code>:before</code> functions which <strong>prime</strong> the <code>:coeffects</code>
+by adding in <code>:event</code>, and <code>:db</code>.  Of course, other interceptors can
+add further to <code>:coeffects</code>.  Perhaps the event handler needs
+data from localstore, or a random number, or a 
+DataScript connection. Interceptors can build up <code>:coeffects</code>, via their 
+<code>:before</code>. </p>
+<p>Equally, some interceptors in the chain will have <code>:after</code> functions
+which process the side effects accumulated into <code>:effects</code>
+including, but not limited to, updates to app-db.</p>
+<h3 id="self-modifying">Self Modifying</h3>
+<p>Through both stages (before and after), <code>context</code> contains a <code>:queue</code>
+of interceptors yet to be processed, and a <code>:stack</code> of interceptors
+already done.</p>
+<p>In advanced cases, these values can be modified by the Interceptor
+functions through which the <code>context</code> is threaded. </p>
+<p>What I&apos;m saying is that interceptors can be dynamically added 
+and removed from the <code>:queue</code> by existing Interceptors. </p>
+<h3 id="credit">Credit</h3>
+<blockquote>
+<p>All truths are easy to understand once they are discovered <br>
+  -- Galileo Galilei</p>
+<p>Things always become obvious after the fact <br>
+  -- Nassim Nicholas Taleb</p>
+</blockquote>
+<p>This elegant and flexible arrangement was originally 
+designed by the talented 
+<a href="https://github.com/pedestal/pedestal/blob/master/guides/documentation/service-interceptors.md" target="_blank">Pedestal Team</a>. Thanks! </p>
+<h3 id="write-an-interceptor">Write An Interceptor</h3>
+<p>Dunno about you, but I&apos;m easily offended by underscores.</p>
+<p>If we had a view  which did this: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">dispatch</span> [<span class="hljs-symbol">:delete-item</span> <span class="hljs-number">42</span>])
+</code></pre>
+<p>We&apos;d have to write this handler: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span> 
+  <span class="hljs-symbol">:delete-item</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> 
+     [db [_ key-to-delete]]     <span class="hljs-comment">;;  &lt;---- Arrgggghhh underscore</span>
+     (<span class="hljs-name"><span class="hljs-builtin-name">dissoc</span></span> db key-to-delete)))
+</code></pre>
+<p>Do you see it there? In the event destructuring!!! Almost mocking us with that
+passive aggressive, understated thing it has going on!! Co-workers
+have said I&apos;m &quot;being overly sensitive&quot;, perhaps even pixel-ist, but 
+you can see it, right? Of course you can.</p>
+<p>What a relief it would be to not have it there, but how? We&apos;ll write an interceptor: <code>trim-event</code></p>
+<p>Once we have written <code>trim-event</code>, our registration will change to look like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span> 
+  <span class="hljs-symbol">:delete-item</span>
+  [trim-event]                <span class="hljs-comment">;;  &lt;--- interceptor added</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> 
+     [db [key-to-delete]]     <span class="hljs-comment">;;  &lt;---yaaah!  no leading underscore </span>
+     (<span class="hljs-name"><span class="hljs-builtin-name">dissoc</span></span> db key-to-delete)))
+</code></pre>
+<p><code>trim-event</code> will need to change the <code>:coeffects</code> map (within <code>context</code>).  Specifically, it will be 
+changing the <code>:event</code> value within the <code>:coeffects</code>. </p>
+<p><code>:event</code> will start off as <code>[:delete-item 42]</code>, but will end up <code>[42]</code>.  <code>trim-event</code>  will remove that 
+leading <code>:delete-item</code> because, by the time the event is 
+being processed, we already know what id it has.</p>
+<p>And, here it is: </p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> trim-event
+  (<span class="hljs-name">re-frame.core/-&gt;interceptor</span>
+    <span class="hljs-symbol">:id</span>      <span class="hljs-symbol">:trim-event</span>
+    <span class="hljs-symbol">:before</span>  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [context]
+               (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [trim-fn (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [event] (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> event rest vec))]
+                 (<span class="hljs-name"><span class="hljs-builtin-name">update-in</span></span> context [<span class="hljs-symbol">:coeffects</span> <span class="hljs-symbol">:event</span>] trim-fn)))))
+</code></pre>
+<p>As you read this, look back to what a <code>context</code> looks like.   </p>
+<p>Notes:</p>
+<ol>
+<li>We use <code>-&gt;interceptor</code> to create an interceptor (which is just a map)</li>
+<li>Our interceptor only has a <code>:before</code> function </li>
+<li>Our <code>:before</code> is given <code>context</code>.  It modifies it and returns it.</li>
+<li>There is no <code>:after</code> for this Interceptor. It has nothing to do 
+with the backwards processing flow of <code>:effects</code>. It is concerned only 
+with <code>:coeffects</code> in the forward flow.</li>
+</ol>
+<h3 id="wrapping-handlers">Wrapping Handlers</h3>
+<p>We&apos;re going well. Let&apos;s do an advanced wrapping. </p>
+<p>Earlier, in the &quot;Handlers Are Interceptors Too&quot; section, I explained that <code>event handlers</code> 
+are wrapped in an Interceptor and placed on the end of an Interceptor chain.  Remember the 
+whole <code>[std1 std2 in1 in2 h]</code> thing?  </p>
+<p>We&apos;ll now look at the <code>h</code> bit. How does an event handler get wrapped to be an Interceptor?</p>
+<p>Reminder - there&apos;s two kinds of handler:</p>
+<ul>
+<li>the <code>-db</code> variety registered by <code>reg-event-db</code></li>
+<li>the <code>-fx</code> variety registered by <code>reg-event-fx</code></li>
+</ul>
+<p>I&apos;ll now show how to wrap the <code>-db</code> variety. </p>
+<p>Reminder: here&apos;s what a <code>-db</code> handler looks like:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db event]               <span class="hljs-comment">;; takes two params</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:flag</span> <span class="hljs-literal">true</span>))     <span class="hljs-comment">;; returns a new db</span>
+</code></pre>
+<p>So, we&apos;ll be writing a function which takes a <code>-db</code> handler and returns an 
+Interceptor which wraps that handler:</p>
+<pre><code class="lang-clj">(defn db-handler-&gt;interceptor
+  [db-handler-fn]
+  (re-frame.core/-&gt;interceptor     ;; a utility function supplied by re-frame
+    :id     :db-handler            ;; ids are decorative only
+    :before (fn [context]
+              (let [{:keys [db event]} (:coeffects context)    ;; extract db and event from coeffects
+                    new-db (db-handler-fn db event)]           ;; call the handler 
+                 (assoc-in context [:effects :db] new-db)))))) ;; put db back into :effects
+</code></pre>
+<p>Notes:</p>
+<ol>
+<li>Notice how this wrapper extracts data from the <code>context&apos;s</code> <code>:coeffects</code> 
+and then calls the handler with that data  (a handler must be called with <code>db</code> and <code>event</code>)</li>
+<li>Equally notice how this wrapping takes the return value from the <code>-db</code> 
+handler and puts it into <code>context&apos;s</code> <code>:effects</code></li>
+<li>The modified <code>context</code> (it has a new <code>:effects</code>) is returned</li>
+<li>This is all done in <code>:before</code>.  There is no <code>:after</code> (it is a noop).  But this 
+could have been reversed with the work happening in <code>:after</code> and <code>:before</code> a noop. Shrug.
+Remember that this Interceptor will be on the end of a chain. </li>
+</ol>
+<p>Feeling confident?  Try writing the wrapper for <code>-fx</code> handlers - it is just a small variation.  </p>
+<h2 id="summary">Summary</h2>
+<p>In this tutorial, we&apos;ve learned: </p>
+<p><strong>1.</strong> When you register an event handler, you can supply a collection of interceptors:</p>
+<pre><code class="lang-clj"> (reg-event-db          
+    :some-id
+    [in1 in2]       ;; &lt;--- a chain of 2 interceptors  
+    (fn [db v]      ;; &lt;-- real handler here
+       ....)))
+</code></pre>
+<p><strong>2.</strong> When you are registering an event handler, you are associating an event id with a chain of interceptors including:</p>
+<ul>
+<li>the ones you supply (optional)</li>
+<li>an extra one on the end, which wraps the handler itself </li>
+<li>a couple at the beginning of the chain, put there by the <code>reg-event-db</code> or <code>reg-event-fx</code>. </li>
+</ul>
+<p><strong>3.</strong> An Interceptor Chain is executed in two stages. First a forwards sweep in which 
+  all <code>:before</code> functions are called, and then second, a backwards sweep in which the 
+  <code>:after</code> functions are called. A <code>context</code> will be threaded through all these calls.</p>
+<p><strong>4.</strong> Interceptors do interesting things:</p>
+<ul>
+<li>add to coeffects  (data inputs to the handler)</li>
+<li>process side effects (returned by a handler)</li>
+<li>produce logs </li>
+<li>further process    </li>
+</ul>
+<p>In the next Tutorial, we&apos;ll look at (side) Effects in more depth.  Later again, we&apos;ll look at Coeffects.   </p>
+<h2 id="appendix">Appendix</h2>
+<h3 id="the-built-in-interceptors">The Built-in Interceptors</h3>
+<p>re-frame comes with some built-in Interceptors:</p>
+<ul>
+<li><strong>debug</strong>: log each event as it is processed. Shows incremental <a href="https://clojuredocs.org/clojure.data/diff" target="_blank"><code>clojure.data/diff</code></a> reports.</li>
+<li><strong>trim-v</strong>:  a convenience. More readable handlers.  </li>
+</ul>
+<p>And some Interceptor factories (functions that return Interceptors):</p>
+<ul>
+<li><strong>enrich</strong>:  perform additional computations (validations?), after the handler has run. More derived data flowing.</li>
+<li><strong>after</strong>: perform side effects, after a handler has run.  Eg: use it to report if the data in <code>app-db</code> matches a schema.   </li>
+<li><strong>path</strong>:  a convenience. Simplifies our handlers. Acts almost like <code>update-in</code>.</li>
+</ul>
+<p>In addition, <a href="https://github.com/Day8/re-frame-undo" target="_blank">a Library like re-frame-undo</a> provides an Interceptor 
+factory called <code>undoable</code> which checkpoints app state.</p>
+<p>To use them, first require them:</p>
+<pre><code class="lang-Clojure">(<span class="hljs-name"><span class="hljs-builtin-name">ns</span></span> my.core
+  (<span class="hljs-symbol">:require</span>
+    [re-frame.core <span class="hljs-symbol">:refer</span> [debug path]])
+</code></pre>
+<hr>
+<p>Previous:  <a href="EffectfulHandlers.html">Effectful Handlers</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Up:  <a href="./">Index</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Next:  <a href="Effects.html">Effects</a>  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="EffectfulHandlers.html" class="navigation navigation-prev " aria-label="Previous page: Effectful Handlers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Effects.html" class="navigation navigation-next " aria-label="Next page: Effects">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Interceptors","level":"4.3","depth":1,"next":{"title":"Effects","level":"4.4","depth":1,"path":"Effects.md","ref":"Effects.md","articles":[]},"previous":{"title":"Effectful Handlers","level":"4.2","depth":1,"path":"EffectfulHandlers.md","ref":"EffectfulHandlers.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Interceptors.md","mtime":"2017-09-21T10:24:52.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

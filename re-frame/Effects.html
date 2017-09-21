@@ -1,0 +1,978 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Effects · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Coeffects.html" />
+    
+    
+    <link rel="prev" href="Interceptors.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Effects</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="effects">Effects</h2>
+<p>About 10% of the time, event handlers need to cause side effects.</p>
+<p>This tutorial explains how side effects are actioned,
+how you can create your own side effects, and how you can 
+make side effects a noop in event replays.</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#where-effects-come-from">Where Effects Come From</a></li>
+<li><a href="#the-effects-map">The Effects Map</a></li>
+<li><a href="#infinite-effects">Infinite Effects</a></li>
+<li><a href="#extensible-side-effects">Extensible Side Effects</a></li>
+<li><a href="#writing-an-effect-handler">Writing An Effect Handler</a></li>
+<li><a href="#db-not-always-needed">:db Not Always Needed</a></li>
+<li><a href="#what-makes-this-work">What Makes This Work?</a></li>
+<li><a href="#order-of-effects">Order Of Effects?</a></li>
+<li><a href="#effects-with-no-data">Effects With No Data</a></li>
+<li><a href="#testing-and-noops">Testing And Noops</a></li>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#external-effects">External Effects</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h3 id="where-effects-come-from">Where Effects Come From</h3>
+<p>When an event handler is registered via <code>reg-event-fx</code>, it must return effects.</p>
+<p>Like this:  </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>              <span class="hljs-comment">;; -fx registration, not -db registration</span>
+  <span class="hljs-symbol">:my-event</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx [_ a]]        <span class="hljs-comment">;; 1st argument is coeffects, instead of db     </span>
+    {<span class="hljs-symbol">:db</span>       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> (<span class="hljs-symbol">:db</span> cofx) <span class="hljs-symbol">:flag</span>  a)         
+     <span class="hljs-symbol">:dispatch</span> [<span class="hljs-symbol">:do-something-else</span> <span class="hljs-number">3</span>]}))   <span class="hljs-comment">;; return effects</span>
+</code></pre>
+<p><code>-fx</code> handlers return a description of the side-effects required, and that description is a map. </p>
+<h3 id="the-effects-map">The Effects Map</h3>
+<p>An effects map contains instructions.</p>
+<p>Each key/value pair in the map is one instruction - the <code>key</code> uniquely identifies
+the particular side effect required, and the <code>value</code> for that <code>key</code> provides
+further data. The structure of <code>value</code> is different for each side-effect.</p>
+<p>Here&apos;s the two instructions from the example above:</p>
+<pre><code class="lang-cljs">{:db       (assoc db :flag  a)         ;; side effect on app-db
+ :dispatch [:do-something-else 3]}     ;; dispatch this event
+</code></pre>
+<p>The <code>:db</code> <code>key</code> instructs that &quot;app-db&quot; should be <code>reset!</code> to the
+<code>value</code> supplied.</p>
+<p>And the <code>:dispatch</code> <code>key</code> instructs that an event should be
+dispatched. The <code>value</code> is the vector to dispatch.</p>
+<p>There&apos;s many other possible
+effects, like for example <code>:dispatch-later</code> or <code>:set-local-store</code>. </p>
+<p>And so on. And so on. Which brings us to a problem.</p>
+<h3 id="infinite-effects">Infinite Effects</h3>
+<p>While re-frame supplies a number of builtin effects, the set of
+possible effects is open ended.</p>
+<p>What if you use PostgreSQL and want an effect which issues mutating
+queries?  Or what if you want to send logs to Logentries or metrics to DataDog.
+Or write values to windows.location. And what happens if your database is
+X, Y or Z?</p>
+<p>The list of effects is long and varied, with everyone needing to use a
+different combination.</p>
+<p>So effect handling has to be extensible. You need a way to define 
+your own side effects.</p>
+<h3 id="extensible-side-effects">Extensible Side Effects</h3>
+<p>re-frame provides a function <code>reg-fx</code> through which you can register 
+your own <code>Effect Handlers</code>.</p>
+<p>Use it like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-fx</span>         <span class="hljs-comment">;; &lt;-- registration function</span>
+   <span class="hljs-symbol">:butterfly</span>   <span class="hljs-comment">;;  &lt;1&gt; </span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [value]  <span class="hljs-comment">;;  &lt;2&gt;</span>
+      ...
+      ))
+</code></pre>
+<p><strong><1></1></strong>  the key for the effect.  When later an effects map contains 
+the key <code>:butterfly</code>, the function we are registering will be used to action it. <br></p>
+<p><strong><2></2></strong>  the function which actions the side effect. Later, it will be called 
+with one argument - the value in the effects map, for this key. </p>
+<p>So, if an event handler returned these two effects:</p>
+<pre><code class="lang-clj">{<span class="hljs-symbol">:dispatch</span>   [<span class="hljs-symbol">:save-maiden</span> <span class="hljs-number">42</span>]
+ <span class="hljs-symbol">:butterfly</span>  <span class="hljs-string">&quot;Flapping&quot;</span>}         <span class="hljs-comment">;; butterfly effect, but no chaos !!</span>
+</code></pre>
+<p>Then the function we registered for <code>:butterfly</code> would be called to handle 
+that effect. And it would be called with the parameter &quot;Flapping&quot;.</p>
+<p>So, terminology:</p>
+<ul>
+<li><code>:butterfly</code> is an &quot;effect key&quot;</li>
+<li>and the function registered is an &quot;effect handler&quot;.</li>
+</ul>
+<p>So re-frame has both <code>event</code> handlers and <code>effect</code> handlers and they are 
+different, despite them both starting with <code>e</code> and ending in <code>t</code>!!</p>
+<h3 id="writing-an-effect-handler">Writing An Effect Handler</h3>
+<p>A word of advice - make them as simple as possible, and then 
+simplify them further.  You don&apos;t want them containing any fancy logic.</p>
+<p>Why?  Well, because they are all side-effecty they will be a pain 
+to test rigorously. And the combination of fancy logic and limited 
+testing always ends in tears.  If not now, later.</p>
+<p>A second word of advice - when you create an effect handler, 
+you also have to design (and document!) the structure of the 
+<code>value</code> expected. </p>
+<p>When you do, realise that you are designing a nano DSL for <code>value</code> and try to
+make that design simple too. If you resist being terse and smart, and instead, favor slightly 
+verbose and obvious, your future self will thank you. Create as little 
+cognitive overhead as possible for the eventual readers of your effectful code.</p>
+<p>This advice coming from the guy who named effects <code>fx</code> ... Oh, the hypocrisy.</p>
+<p>In my defence, here&apos;s the built-in effect handler for <code>:db</code>:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-fx</span>
+  <span class="hljs-symbol">:db</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [value]
+    (<span class="hljs-name"><span class="hljs-builtin-name">reset!</span></span> re-frame.db/app-db value)))
+</code></pre>
+<p>So, yeah, simple ... and, because of it, I can almost guarantee there&apos;s no bug in ... bang, crash, smoke, flames.</p>
+<blockquote>
+<p>Note: the return value of an effect handler is ignored.</p>
+</blockquote>
+<h3 id="db-not-always-needed">:db Not Always Needed</h3>
+<p>An effects map does not need to include the <code>effect key</code> <code>:db</code>. </p>
+<p>It is perfectly valid for an event handler 
+to not change <code>app-db</code>. </p>
+<p>In fact, it is perfectly valid for an event handler to return 
+an effects map of <code>{}</code>.  Slightly puzzling, but not a problem.  </p>
+<h3 id="what-makes-this-work">What Makes This Work?</h3>
+<p>A silently inserted interceptor.</p>
+<p>Whenever you register an event handler via <strong>either</strong> <code>reg-event-db</code> 
+or <code>reg-event-fx</code>, an interceptor, cunningly named <code>do-fx</code>,<br>is inserted at the beginning of the chain. </p>
+<p>Example: if your event handler registration looked like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>
+  <span class="hljs-symbol">:some-id</span>
+  [debug (<span class="hljs-name">path</span> <span class="hljs-symbol">:right</span>)]     <span class="hljs-comment">;; &lt;-- two interceptors, apparently</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx _] 
+     {})                    <span class="hljs-comment">;; &lt;-- imagine returned effects here</span>
+</code></pre>
+<p>While it might look like you have registered with 2 interceptors, 
+<code>reg-event-fx</code> will make it 3: </p>
+<pre><code class="lang-clj">[do-fx debug (<span class="hljs-name">path</span> <span class="hljs-symbol">:right</span>)]
+</code></pre>
+<p>It silently inserts <code>do-fx</code> at the front, and this is a good thing. </p>
+<p>The placement of <code>do-fx</code> at the beginning of the interceptor chain means 
+its <code>:after</code> function would be the final act when the chain is executed 
+(forwards and then backwards, as described in the Interceptor Tutorial).</p>
+<p>In this final act, the <code>:after</code> function extracts <code>:effects</code> from <code>context</code> 
+and simply iterates across the key/value pairs it contains, calling the 
+registered &quot;effect handlers&quot; for each.</p>
+<blockquote>
+<p>For the record, the FISA Court requires that we deny all claims 
+that <code>do-fx</code> is secretly injected NSA surveillance-ware. <br>
+We also note that you&apos;ve been particularly sloppy with your personal 
+grooming today, including that you forgot to clean your teeth. Again.</p>
+</blockquote>
+<p>If ever you want to take control of the way effect handling is done, 
+create your own alternative to <code>reg-event-fx</code> and, in it, inject
+your own version of the <code>do-fx</code> interceptor at the front 
+of the interceptor chain.  It is only a few lines of code. </p>
+<h3 id="order-of-effects">Order Of Effects?</h3>
+<p>There isn&apos;t one.</p>
+<p><code>do-fx</code> does not currently provide you with control over the order in 
+which side effects occur. The <code>:db</code> side effect 
+might happen before <code>:dispatch</code>, or not. You can&apos;t rely on it.</p>
+<p><em>Note:</em> if you feel you need ordering, then please 
+open an issue and explain the usecase. The current absence of 
+good usecases is the reason ordering isn&apos;t implemented. So give 
+us a usercase and we&apos;ll revisit, maybe. </p>
+<p><em>Further Note:</em> if later ordering was needed, it might be handled via 
+metadata on <code>:effects</code>. Also, perhaps by allowing <code>reg-fx</code> to optionally 
+take two functions:</p>
+<ul>
+<li>an effects pre-process fn  &lt;-- new. Takes <code>:effects</code> returns <code>:effects</code></li>
+<li>the effects handler (as already described above). </li>
+</ul>
+<p>Anyway, these are all just possibilities. But not needed or implemented yet. </p>
+<h3 id="effects-with-no-data">Effects With No Data</h3>
+<p>Some effects have no associated data:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>
+  <span class="hljs-symbol">:some-id</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [coeffect _] 
+     {<span class="hljs-symbol">:exit-fullscreen</span> <span class="hljs-literal">nil</span>}))    <span class="hljs-comment">;;   &lt;--- no data, use a nil</span>
+</code></pre>
+<p>In these cases, although it looks odd, just supply <code>nil</code> as the value for this key.</p>
+<p>The associated effect handler would look like:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-fx</span>
+  <span class="hljs-symbol">:exit-fullscreen</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [_]             <span class="hljs-comment">;; we don&apos;t bother with that nil value</span>
+     (<span class="hljs-name">.exitFullscreen</span> js/document)))
+</code></pre>
+<h3 id="testing-and-noops">Testing And Noops</h3>
+<p>When you are running tests or replaying events, it is sometimes 
+useful to stub out effects.</p>
+<p>This is easily done - you simply register a noop effect handler. </p>
+<p>Want to stub out the <code>:dispatch</code> effect?  Do this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-fx</span>
+  <span class="hljs-symbol">:dispatch</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [_] ))    <span class="hljs-comment">;; a noop</span>
+</code></pre>
+<p>If your test does alter registered effect handlers, and you are using <code>cljs.test</code>,
+then you can use a <code>fixture</code> to restore all effect handlers at the end of your test: </p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> fixture-re-frame
+  []
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [restore-re-frame (<span class="hljs-name"><span class="hljs-builtin-name">atom</span></span> <span class="hljs-literal">nil</span>)]
+    {<span class="hljs-symbol">:before</span> #(<span class="hljs-name"><span class="hljs-builtin-name">reset!</span></span> restore-re-frame (<span class="hljs-name">re-frame.core/make-restore-fn</span>))
+     <span class="hljs-symbol">:after</span>  #(@restore-re-frame)}))
+
+(<span class="hljs-name">use-fixtures</span> <span class="hljs-symbol">:each</span> (<span class="hljs-name">fixture-re-frame</span>))
+</code></pre>
+<p><code>re-frame.core/make-restore-fn</code> creates a checkpoint for re-frame state (including 
+registered handlers) to which you can return. </p>
+<h3 id="existing-effect-handlers">Existing Effect Handlers</h3>
+<p>Built-in effect handlers are detailed <a href="docs/API.md">the API</a> document.</p>
+<p>And please review the <a href="External-Resources.html">External-Resources document</a> for a list of 3rd party Effect Handlers.</p>
+<h3 id="summary">Summary</h3>
+<p>The 4 Point Summary in note form:</p>
+<ol>
+<li>Event handlers should only return effect declaratively</li>
+<li>They return a map like <code>{:effect1 value1 :effect2 value2}</code></li>
+<li>Keys of this map can refer to builtin effects handlers (see below) or custom ones</li>
+<li>We use <code>reg-fx</code> to register our own effects handlers, built-in ones are already registered</li>
+</ol>
+<hr>
+<p>Previous:  <a href="Interceptors.html">Interceptors</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Up:  <a href="./">Index</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Next:  <a href="Coeffects.html">Coeffects</a>  </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Interceptors.html" class="navigation navigation-prev " aria-label="Previous page: Interceptors">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Coeffects.html" class="navigation navigation-next " aria-label="Next page: Coeffects">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Effects","level":"4.4","depth":1,"next":{"title":"Coeffects","level":"4.5","depth":1,"path":"Coeffects.md","ref":"Coeffects.md","articles":[]},"previous":{"title":"Interceptors","level":"4.3","depth":1,"path":"Interceptors.md","ref":"Interceptors.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Effects.md","mtime":"2017-09-21T10:24:52.721Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

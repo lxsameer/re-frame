@@ -1,0 +1,1021 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Testing · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="FAQs/" />
+    
+    
+    <link rel="prev" href="Debugging.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Testing</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="testing">Testing</h2>
+<p>This is an introduction to testing re-frame apps. It 
+walks you through some choices.</p>
+<h2 id="what-to-test">What To Test</h2>
+<p>For any re-frame app, there&apos;s three things to test:</p>
+<ul>
+<li><p><strong>Event Handlers</strong> - most of your testing focus will 
+ be here because this is where most of the logic lives</p>
+</li>
+<li><p><strong>Subscription Handlers</strong> - often not a lot to test here. Only 
+<a href="SubscriptionInfographic.html">Layer 2</a> subscriptions need testing. </p>
+</li>
+<li><p><strong>View functions</strong> - I don&apos;t tend to write tests for views. There, I said it.
+Hey!  It is mean to look at someone with that level of disapproval, 
+while shaking your head. I have my reasons ...<br>
+In my experience with the re-frame architecture, View Functions
+tend to be an unlikely source of bugs. And every line of code you write is
+like a ball &amp; chain you must forevermore drag about, so I dislike maintaining 
+tests which don&apos;t deliver good bang for buck.</p>
+</li>
+</ul>
+<p>And, yes, in theory there&apos;s also <code>Effect Handlers</code> (Domino 3) to test, 
+but you&apos;ll hardly ever write one, and, anyway, each one is different, so 
+I&apos;ve got no good general insight to offer you for them. They will be ignored
+in this tutorial.  </p>
+<h2 id="test-terminology">Test Terminology</h2>
+<p>Let&apos;s establish some terminology to aid the further explanations in this 
+tutorial.  Every unittest has 3 steps: </p>
+<ol>
+<li><strong>setup</strong> initial conditions</li>
+<li><strong>execute</strong> the thing-under-test</li>
+<li><strong>verify</strong> that the thing-under-test did the right thing</li>
+</ol>
+<h2 id="exposing-event-handlers-for-test">Exposing Event Handlers For Test</h2>
+<p>Event Handlers are pure functions which should make them easy to test, right?</p>
+<p>First, create a named event handler using <code>defn</code> like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> select-triangle
+  [db [_ triangle-id]
+  ... return a modified version of db)
+</code></pre>
+<p>You&apos;d register this handler in a separate step:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">re-frame.core/reg-event-db</span>     <span class="hljs-comment">;; this is a &quot;-db&quot; event handler, not &quot;-fx&quot;</span>
+  <span class="hljs-symbol">:select-triangle</span>   
+  [some-interceptors]
+  select-triangle)    <span class="hljs-comment">;; &lt;--- defn above. don&apos;t use an annonomous fn</span>
+</code></pre>
+<p>This arrangement means the event handler function 
+<code>select-triangle</code> is readily available to be unittested.</p>
+<h2 id="event-handlers---setup---part-1">Event Handlers - Setup - Part 1</h2>
+<p>To test <code>select-triangle</code>, a unittest must pass in values for the two arguments 
+<code>db</code> and <code>v</code>. And, so, our <strong>setup</strong> would have to construct both values.</p>
+<p>But how to create a useful <code>db</code> value?  </p>
+<p><code>db</code> is a map of a certain structure, so one way would be to simply <code>assoc</code> values 
+into a map at certain paths to simulate a real-world <code>db</code> value or, even easier, just use 
+a map literal, like this:</p>
+<pre><code class="lang-cljs">;; a test
+(let [
+      ;; setup - create db and event
+      db      {:some 42  :thing &quot;hello&quot;}   ; a literal
+      event   [:select-triange :other :event :args]
+
+      ;; execute
+      result-db (select-triange db event)] 
+
+      ;; validate that result-db is correct)
+      (is ...)
+</code></pre>
+<p>This certainly works in theory, but in practice, 
+unless we are careful, constructing the <code>db</code> 
+value in <strong>setup</strong> could:</p>
+<ul>
+<li>be manual and time consuming </li>
+<li>tie tests to the internal structure of <code>app-db</code></li>
+</ul>
+<p>The <strong>setup</strong> of every test could end up relying on the internal structure
+of <code>app-db</code> and any change in that structure (which is inevitable over time) 
+would result in a lot re-work in the tests. That&apos;s too fragile.</p>
+<p>So, this approach doesn&apos;t quite work. </p>
+<h2 id="event-handlers---setup---part-2">Event Handlers - Setup - Part 2</h2>
+<blockquote>
+<p>In re-frame, <code>Events</code> are central. They are the &quot;language of the system&quot;. They 
+provide the eloquence.  </p>
+</blockquote>
+<p>The <code>db</code> value (stored in <code>app-db</code>) is the cumulative result
+of many event handlers running.</p>
+<p>We can use this idea.  In <strong>setup</strong>, instead of manually trying to create that <code>db</code> value, we could 
+&quot;build up&quot; a <code>db</code> value by threading <code>db</code> through many event handlers
+which cumulatively create the required initial state.  Tests then need
+know nothing about the internal structure of that <code>db</code>.</p>
+<p>Like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [
+      <span class="hljs-comment">;; setup - cummulatively build up db </span>
+      db (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> {}    <span class="hljs-comment">;; empty db </span>
+             (<span class="hljs-name">initialise-db</span> [<span class="hljs-symbol">:initialise-db</span>])   <span class="hljs-comment">;; each event handler expects db and event </span>
+             (<span class="hljs-name">clear-panel</span>   [<span class="hljs-symbol">:clear-panel</span>])
+             (<span class="hljs-name">draw-triangle</span> [<span class="hljs-symbol">:draw-triangle</span> <span class="hljs-number">1</span> <span class="hljs-number">2</span> <span class="hljs-number">3</span>]))
+
+      event  [<span class="hljs-symbol">:select-triange</span> <span class="hljs-symbol">:other</span> <span class="hljs-symbol">:stuff</span>]
+
+      <span class="hljs-comment">;; now execute the event handler under test</span>
+      db&apos;    (<span class="hljs-name">select-triange</span> db event)]
+
+      <span class="hljs-comment">;; validate that db&apos; is correct</span>
+      (<span class="hljs-name">is</span> ...)
+</code></pre>
+<p>This approach works so long as all the event handlers are
+of the <code>-db</code> kind, but the threading gets a little messy when some event 
+handlers are of the <code>-fx</code> kind which take a <code>coeffect</code> argument and 
+return <code>effects</code>, instead of a <code>db</code> value. </p>
+<p>So, this approach is quite workable in some cases, but can get messy
+in the general case. </p>
+<h2 id="event-handlers---setup---part-3">Event Handlers - Setup - Part 3</h2>
+<p>There is further variation which is quite general but not as pure.</p>
+<p>During test <strong>setup</strong> we could literally just <code>dispatch</code> the events 
+which would put <code>app-db</code> into the right state.  </p>
+<p>Except, we&apos;d have to use <code>dispatch-sysnc</code> rather <code>dispatch</code> to 
+force immediate handling of events, rather than queuing.  </p>
+<pre><code class="lang-clj">  ;; setup - cummulatively build up db 
+  (dispatch-sync [:initialise-db])
+  (dispatch-sync [:clear-panel])
+  (dispatch-sync [:draw-triangle 1 2 3]))
+
+  ;; execute
+  (dispatch-sync  [:select-triange :other :stuff])
+
+  ;; validate that the valuein `app-db` is correct
+  ;; perhaps with subscriptions
+</code></pre>
+<p>Notes:</p>
+<ol>
+<li>we use <code>dispatch-sync</code> because <code>dispatch</code> is async (event is handled not now, but soon) </li>
+<li>Not pure. We are choosing to mutate the global <code>app-db</code>. But
+having said that, there&apos;s something about this approach with is remarkably 
+pragmatic.</li>
+<li>the <strong>setup</strong> is now very natural. The associated handlers can be either <code>-db</code> or <code>-fx</code></li>
+<li>if the handlers have effects other than just updating app-db, we might need to stub out XXX</li>
+<li>How do we look at the results ???? </li>
+</ol>
+<p>If this method appeals to you, you should ABSOLUTELY review the utilities in this helper library:
+<a href="https://github.com/Day8/re-frame-test" target="_blank">re-frame-test</a>.</p>
+<p>In summary, event handlers should be easy to test because they are pure functions. The interesting
+part is the unittest &quot;setup&quot; where we need to establishing an initial value for <code>db</code>. </p>
+<h2 id="subscription-handlers">Subscription Handlers</h2>
+<p>Here&apos;s a Subscription Handler from 
+<a href="https://github.com/Day8/re-frame/blob/master/examples/todomvc/src/todomvc/subs.cljs" target="_blank">the todomvc example</a>:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-sub</span>
+  <span class="hljs-symbol">:visible-todos</span>
+
+  <span class="hljs-comment">;; signal function</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [query-v _]
+    [(<span class="hljs-name">subscribe</span> [<span class="hljs-symbol">:todos</span>])
+     (<span class="hljs-name">subscribe</span> [<span class="hljs-symbol">:showing</span>])])
+
+  <span class="hljs-comment">;; computation function</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [[todos showing] _]   <span class="hljs-comment">;; that 1st parameter is a 2-vector of values</span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [filter-fn (<span class="hljs-name"><span class="hljs-builtin-name">case</span></span> showing
+                      <span class="hljs-symbol">:active</span> (<span class="hljs-name"><span class="hljs-builtin-name">complement</span></span> <span class="hljs-symbol">:done</span>)
+                      <span class="hljs-symbol">:done</span>   <span class="hljs-symbol">:done</span>
+                      <span class="hljs-symbol">:all</span>    identity)]
+      (<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> filter-fn todos))))
+</code></pre>
+<p>How do we test this?</p>
+<p>First, we could split the computation function from its registration, like this: </p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> visible-todos
+  [[todos showing] _]  
+
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [filter-fn (<span class="hljs-name"><span class="hljs-builtin-name">case</span></span> showing
+                    <span class="hljs-symbol">:active</span> (<span class="hljs-name"><span class="hljs-builtin-name">complement</span></span> <span class="hljs-symbol">:done</span>)
+                    <span class="hljs-symbol">:done</span>   <span class="hljs-symbol">:done</span>
+                    <span class="hljs-symbol">:all</span>    identity)]
+   (<span class="hljs-name"><span class="hljs-builtin-name">filter</span></span> filter-fn todos)))
+
+(<span class="hljs-name">reg-sub</span>
+  <span class="hljs-symbol">:visible-todos</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [query-v _]
+      [(<span class="hljs-name">subscribe</span> [<span class="hljs-symbol">:todos</span>])
+       (<span class="hljs-name">subscribe</span> [<span class="hljs-symbol">:showing</span>])])
+  visible-todos)     <span class="hljs-comment">;; &lt;--- computation function used here</span>
+</code></pre>
+<p>That makes <code>visible-todos</code> available for direct unit testing.  But, as we experienced 
+with Event Handlers, the challenge is around constructing <code>db</code> values (first parameter)
+in a way which doesn&apos;t become fragile. </p>
+<h2 id="view-functions---part-1">View Functions - Part 1</h2>
+<p>Components/views are more tricky and there are a few options.</p>
+<p>But remember my ugly secret - I don&apos;t tend to write tests for my views. </p>
+<p>But here&apos;s how, theoretically, I&apos;d write tests if I wasn&apos;t me ...</p>
+<p>If a View Function is <a href="https://github.com/Day8/re-frame/wiki/Creating-Reagent-Components#form-1-a-simple-function" target="_blank">Form-1</a>,
+then it is fairly easy to test.  </p>
+<p>A trivial example:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> greet
+   [name]
+   [<span class="hljs-symbol">:div</span> <span class="hljs-string">&quot;Hello &quot;</span> name])
+
+(<span class="hljs-name">greet</span> <span class="hljs-string">&quot;Wiki&quot;</span>)
+<span class="hljs-comment">;;=&gt; [:div &quot;Hello &quot; &quot;Wiki&quot;]</span>
+</code></pre>
+<p>So, here, testing involves passing values into the function and checking the data structure returned
+for correctness. </p>
+<p>What&apos;s returned is hiccup, of course. So how do you test hiccup for correctness?  </p>
+<p>hiccup is just a clojure data structure - vectors containing keywords, and maps, and other vectors, etc.
+Perhaps you&apos;d use <a href="https://github.com/nathanmarz/specter" target="_blank">https://github.com/nathanmarz/specter</a> to declaratively check on the presence
+of certain values and structures? Or do it more manually.</p>
+<h2 id="view-functions---part-2a">View Functions - Part 2A</h2>
+<p>But what if the View Function has a subscription?  </p>
+<pre><code class="lang-clj">(defn my-view
+   [something] 
+   (let [val  (subscribe [:query-id])]     &lt;-- reactive subscription
+     [:div .... using @val in here])))
+</code></pre>
+<p>The use of <code>subscribe</code> makes the function impure (it obtains data from places other than its args).</p>
+<p>A testing plan might be: </p>
+<ol>
+<li>setup  <code>app-db</code> with some values in the right places  (via dispatch of events?)</li>
+<li>call <code>my-view</code> (with a parameter) which will return hiccup</li>
+<li>check the hiccup structure for correctness. </li>
+</ol>
+<p>Continuing on, in a second phase you could then:</p>
+<ol>
+<li>change the value in <code>app-db</code>  (which will cause the subscription to fire)</li>
+<li>call view functions again (hiccup returned). </li>
+<li>check the new hiccup for correctness </li>
+</ol>
+<p>Which is all possible, if a little messy. </p>
+<h2 id="view-functions---part-2b">View Functions - Part 2B</h2>
+<p>There is a pragmatic method available to handle the impurity: use <code>with-redefs</code> 
+to stub out <code>subscribe</code>.  Like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> subscription-stub [x]
+  (<span class="hljs-name"><span class="hljs-builtin-name">atom</span></span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">case</span></span> x
+      [<span class="hljs-symbol">:query-id</span>] <span class="hljs-number">42</span>)))
+
+(<span class="hljs-name">deftest</span> some-test
+  (<span class="hljs-name">with-redefs</span> [re-frame/subscribe (<span class="hljs-name">subscription-stub</span>)]
+    (<span class="hljs-name">testing</span> <span class="hljs-string">&quot;some some view which does a subscribe&quot;</span>
+      ..... call the view function and the hiccup output)))
+</code></pre>
+<p>For more integration level testing, you can use <code>with-mounted-component</code>
+from the <a href="https://github.com/reagent-project/reagent-template/blob/master/src/leiningen/new/reagent/test/cljs/reagent/core_test.cljs" target="_blank">reagent-template</a> 
+to render the component in the browser and validate the generated DOM. </p>
+<h2 id="view-functions---part-2c">View Functions - Part 2C</h2>
+<p>Or ... there is another option: you can structure in the first place for pure view functions. </p>
+<p>The trick here is to create an outer and inner component.  The outer sources the data 
+(via a subscription), and passes it onto the inner as props (parameters).</p>
+<p>As a result, the inner component, which does the testable work, is pure and 
+easily tested. The outer is impure but trivial.</p>
+<p>To get a more concrete idea, I&apos;ll direct you to another page in the re-frame docs 
+which has nothing to do with testing, but it does use this <code>simple-outer-subscribe-with-complicated-inner-render</code> 
+pattern for a different purpose: 
+<a href="Using-Stateful-JS-Components.html">Using Stateful JS Components</a></p>
+<p>Note: this technique could be made simple and almost invisible via the 
+use of macros.</p>
+<p>This pattern has been independently discovered by many. For example, here 
+it is called the <a href="https://medium.com/@learnreact/container-components-c0e67432e005#.mb0hzgm3l" target="_blank">Container/Component pattern</a>.</p>
+<h2 id="summary">Summary</h2>
+<p>Event handlers will be your primary focus when testing. Remember to review the utilities in
+<a href="https://github.com/Day8/re-frame-test" target="_blank">re-frame-test</a>.</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Debugging.html" class="navigation navigation-prev " aria-label="Previous page: Debugging">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="FAQs/" class="navigation navigation-next " aria-label="Next page: FAQs">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Testing","level":"9.3","depth":1,"next":{"title":"FAQs","level":"10.1","depth":1,"path":"FAQs/README.md","ref":"FAQs/README.md","articles":[]},"previous":{"title":"Debugging","level":"9.2","depth":1,"path":"Debugging.md","ref":"Debugging.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Testing.md","mtime":"2017-09-21T10:24:52.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,895 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Eek! Performance Problems · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Solve-the-CPU-hog-problem.html" />
+    
+    
+    <link rel="prev" href="External-Resources.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Eek! Performance Problems</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="eek-performance-problems">Eek! Performance Problems</h2>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#1-is-it-the-debug-interceptor">1. Is It The <code>debug</code> Interceptor?</a></li>
+<li><a href="#2--on-big-structures">2. <code>=</code> On Big Structures</a><ul>
+<li><a href="#an-example-of-problem-2">An Example Of Problem 2</a></li>
+<li><a href="#solutions-to-problem-2">Solutions To Problem 2</a></li>
+</ul>
+</li>
+<li><a href="#3-are-you-using-a-react-key">3. Are you Using a React <code>key</code>?</a></li>
+<li><a href="#4-callback-functions">4. Callback Functions</a></li>
+<li><a href="#a-weapon">A Weapon</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h2 id="1-is-it-the-debug-interceptor">1. Is It The <code>debug</code> Interceptor?</h2>
+<p>This first one is something of a non-problem. </p>
+<p>Are you are using the <code>re-frame.core/debug</code> Interceptor?
+You should be, it&apos;s useful. <strong>But</strong> you do need to be aware of its possible performance implications.  </p>
+<p><code>debug</code> reports what&apos;s changed after an event handler has run by using 
+<code>clojure.data/diff</code> to do deep, CPU intensive diff on <code>app-db</code>. 
+That diff could be taking a while, and leading to apparent performance problems.</p>
+<p>The good news is this really isn&apos;t a production problem.  <code>debug</code> should only be 
+present in an Interceptor Chain at development time, and it should be removed 
+from production using <a href="https://github.com/Day8/re-frame/blob/be6f49f21e245dea1cd0a857b70dd720bfbe18fd/examples/todomvc/src/todomvc/handlers.cljs#L33" target="_blank">this technique</a>.</p>
+<p>Also related, anything which writes large data structures, or strings, to the 
+js console, will be slow. So press F12, pull up devtools console, and have a 
+good look at what&apos;s happening in there. </p>
+<h2 id="2--on-big-structures">2. <code>=</code> On Big Structures</h2>
+<p>Reagent uses <code>=</code> to compare the previous value of a prop with the 
+new value of that prop, when it determines if a component needs 
+rerendering. <a href="https://github.com/Day8/re-frame/wiki/When-do-components-update%3F" target="_blank">Make sure you have a good understanding of this.</a>. </p>
+<p>In the worst case, if those props are big data structures which differ only in some 
+tiny, leaf aspect, then a lot of CPU cycles will be spent doing 
+the <code>=</code> comparison only to eventually work out that, indeed, the 
+answer is <code>false</code>. </p>
+<p>This problem is exacerbated when components return a lot of hiccup, because 
+lots of hiccup normally means lots of props which, in turn, means lots of <code>=</code> 
+work to do on each of those props. Any rerender with those characteristics 
+could end up chewing a lot of CPU cycles.</p>
+<h3 id="an-example-of-problem-2">An Example Of Problem 2</h3>
+<p>Imagine you were rendering a 19 by 19 &quot;Go&quot; board. </p>
+<p>And imagine that you have a high level board renderer component 
+which creates hiccup for the 361 sub components (19 x 19 grid), 
+and that it provides 3 props  to each child:</p>
+<ol>
+<li>grid x cord</li>
+<li>grid y coord</li>
+<li>a chunk of data representing the current game state, from which each 
+of the 361 individual grid components is expected to extract the data 
+they need to render their grid position. </li>
+</ol>
+<p>This arrangement could be slow. </p>
+<p><strong>First</strong>, you have a parent component returning hiccup for 361 sub-components
+and that&apos;s a lot of hiccup!! Sure, it might not be much code - just a couple 
+of nested <code>for</code>, but the hiccup data structure built will be substantial.</p>
+<p><strong>Second</strong>, after the board renderer returns all this hiccup, for every 
+one of those 361 sub-components, Reagent must then check the 3 props to 
+see if they are <code>=</code> to the value last rendered (to determine if they, in turn, 
+need to be rerendered), and the comparison on the 3rd prop (game state) 
+might be deep and expensive. Worse, we do the same expensive check 361 
+times in a row, and every time we get a <code>false</code> (because games state 
+is not <code>=</code> to last time). </p>
+<p><strong>Third</strong>, because Reagent gets 361 <code>falses</code>, it will further rerender 
+all 361 sub-components even though 360 of them produce the same 
+hiccup as last time - only one position in the gird has changed. </p>
+<p>So, when a new stone is placed on the board, and the game state changes, 
+that triggers a large amount of unnecessary calculation, just to figure 
+out that there&apos;s only a rendering change at one point in the 19x19 grid. </p>
+<p>So, that&apos;s how you can get a performance problem:  lots of hiccup, 
+mixed with time consuming <code>=</code> tests on big props. </p>
+<h3 id="solutions-to-problem-2">Solutions To Problem 2</h3>
+<p>The solution is to not do the unnecessary work.  Duh!  </p>
+<p>Produce only the hiccup that is needed.  Don&apos;t unnecessarily 
+pass around big complicated state in props, unless you really need to. </p>
+<p>In the Go example described above, for each new stone placed, only 
+one point in the Go board actually needs to be rerendered, and 
+yet our code asked Reagent to chew a lot of CPU to figure that out.</p>
+<p>These kinds of tweaks would improve performance: </p>
+<ul>
+<li><p>don&apos;t give the entire game state to each of the 361 sub components 
+and then ask them to extract what they need.  Instead, give each 
+just the state it needs, and nothing more. That will make the <code>=</code> 
+process faster. It will also allow for Reagent to figure out that 
+360 of the sub components have the same props as last time, and 
+don&apos;t need rerendering. And, so, only one sub-component will be 
+rerendered when the parent &quot;board level&quot; component rerenders.</p>
+</li>
+<li><p>Also, could you render the board row by row? So that less hiccup 
+is produced by any one component?  Can those rows <code>subscribe</code> 
+to just the data for their row, so they only rerender when the 
+row-data changes; they only generate hiccup when something really has changed?</p>
+</li>
+</ul>
+<h2 id="3-are-you-using-a-react-key">3. Are you Using a React <code>key</code>?</h2>
+<p>Correctly using React <code>keys</code> can also make a huge difference to performance.</p>
+<p>Some resources:</p>
+<ol>
+<li><a href="http://stackoverflow.com/questions/27863039/key-property-inside-component-function" target="_blank">http://stackoverflow.com/questions/27863039/key-property-inside-component-function</a></li>
+<li><a href="http://stackoverflow.com/a/37186230/5215391" target="_blank">http://stackoverflow.com/a/37186230/5215391</a></li>
+<li><a href="https://groups.google.com/d/msg/reagent-project/J1ELaLV20MU/iutebA-JEgAJ" target="_blank">https://groups.google.com/d/msg/reagent-project/J1ELaLV20MU/iutebA-JEgAJ</a></li>
+</ol>
+<h2 id="4-callback-functions">4. Callback Functions</h2>
+<p>Look at this <code>div</code>:</p>
+<pre><code>[:div  {:on-mouse-over  (fn [event] ....)  }   &quot;hello&quot;]
+</code></pre><p>Every time it is rendered, that <code>:on-mouse-over</code> function will be regenerated, 
+and it will NOT test <code>=</code> to the last time it rendered.  It will appear to be a new function. 
+It will appear to React that it has to replace the event handler. </p>
+<p>Most of the time, this is not an issue.  But if you are generating a LOT of DOM
+this small inefficiency can add up.  </p>
+<p>To work around the problem, lift the function out of the render.  Use a Form-2 function like this:</p>
+<pre><code>(defn my-component 
+   []
+   (let [mouse-over-cb  (fn [event] ....)  ]      ;; created once 
+      (fn []                                      ;; rendered many times
+         [:div {:on-mouse-over  mouse-over-cb}]))
+</code></pre><p>Now, React will see that <code>mouse-over-cb</code> is the same as last time. It won&apos;t think 
+the event handler has been replaced. </p>
+<p>But like I say, don&apos;t be too paranoid about this, it is unlikely
+to be an issue unless you have something like a table with a 
+lot of rows. </p>
+<h2 id="a-weapon">A Weapon</h2>
+<p>Of course, the way to really track down what is going on is to 
+use the <a href="https://github.com/Day8/re-frame/wiki/Debugging" target="_blank">OFFICIAL debugging technique</a>. 
+See the four dominoes play out in the console. You may be surprised 
+by what you find is happening. </p>
+<p>Be aware that tracing adds its own performance drag - there&apos;s the 
+overhead of all that stuff getting written on the js console. 
+Especially if the data getting traced is big - for example, 
+tracing all of <code>app-db</code> in the console can take a while and force 
+Chrome devtools to take masses of RAM.  So you may want to selectively 
+add tracing when poking about. </p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="External-Resources.html" class="navigation navigation-prev " aria-label="Previous page: External Resources">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Solve-the-CPU-hog-problem.html" class="navigation navigation-next " aria-label="Next page: Solve the CPU hog problem">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Eek! Performance Problems","level":"10.3","depth":1,"next":{"title":"Solve the CPU hog problem","level":"10.4","depth":1,"path":"Solve-the-CPU-hog-problem.md","ref":"Solve-the-CPU-hog-problem.md","articles":[]},"previous":{"title":"External Resources","level":"10.2","depth":1,"path":"External-Resources.md","ref":"External-Resources.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Performance-Problems.md","mtime":"2017-09-21T10:24:52.725Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

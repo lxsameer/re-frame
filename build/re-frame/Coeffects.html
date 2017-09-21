@@ -1,0 +1,969 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Coeffects · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SubscriptionInfographic.html" />
+    
+    
+    <link rel="prev" href="Effects.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Coeffects</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="coeffects">Coeffects</h2>
+<p>This tutorial explains <code>coeffects</code>.</p>
+<p>It explains what they are, how they can be &quot;injected&quot;, and how 
+to manage them in tests.</p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<h2 id="table-of-contents">Table Of Contents</h2>
+<ul>
+<li><a href="#what-are-they">What Are They?</a></li>
+<li><a href="#an-example">An Example</a></li>
+<li><a href="#how-we-want-it">How We Want It</a></li>
+<li><a href="#abracadabra">Abracadabra</a></li>
+<li><a href="#which-interceptors">Which Interceptors?</a></li>
+<li><a href="#inject-cofx"><code>inject-cofx</code></a></li>
+<li><a href="#more-inject-cofx">More <code>inject-cofx</code></a></li>
+<li><a href="#meet-reg-cofx">Meet <code>reg-cofx</code></a></li>
+<li><a href="#example-of-reg-cofx">Example Of <code>reg-cofx</code></a></li>
+<li><a href="#another-example-of-reg-cofx">Another Example Of <code>reg-cofx</code></a></li>
+<li><a href="#secret-interceptors">Secret Interceptors</a></li>
+<li><a href="#testing">Testing</a></li>
+<li><a href="#the-5-point-summary">The 5 Point Summary</a></li>
+</ul>
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+<h3 id="what-are-they">What Are They?</h3>
+<p><code>coeffects</code> are the data resources that an event handler needs 
+to perform its computation.</p>
+<p>Because the majority of event handlers only need <code>db</code> and 
+<code>event</code>, there&apos;s a specific registration function, called <code>reg-event-db</code>, 
+which delivers ONLY these two coeffects as arguments to an event 
+handler, making this common case easy to program.</p>
+<p>But sometimes an event handler needs other data inputs
+to perform its computation.  Things like a random number, or a GUID,
+or the current datetime. Perhaps it needs access to a
+DataScript connection.</p>
+<h3 id="an-example">An Example</h3>
+<p>This handler obtains data directly from LocalStore:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+   <span class="hljs-symbol">:load-defaults</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]
+     (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [val (<span class="hljs-name">js-&gt;clj</span> (<span class="hljs-name">.getItem</span> js/localStorage <span class="hljs-string">&quot;defaults-key&quot;</span>))]  <span class="hljs-comment">;; &lt;-- Problem</span>
+       (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:defaults</span> val))))
+</code></pre>
+<p>This works, but there&apos;s a cost.</p>
+<p>Because it has directly accessed LocalStore, this event handler is not 
+pure, and impure functions cause well-documented paper cuts.</p>
+<h3 id="how-we-want-it">How We Want It</h3>
+<p>Our goal in this tutorial will be to rewrite this event handler so 
+that it <strong>only</strong> uses data from arguments. This will take a few steps.</p>
+<p>The first is that we switch to
+using <code>reg-event-fx</code> (instead of <code>reg-event-db</code>).</p>
+<p>Event handlers registered via <code>reg-event-fx</code> are slightly 
+different to those registered via <code>reg-event-db</code>. <code>-fx</code> handlers 
+get two arguments, but the first is not <code>db</code>. Instead it 
+is an argument which we will call <code>cofx</code> (that&apos;s a nice distinct 
+name which will aid communication). </p>
+<p>Previous tutorials showed there&apos;s a <code>:db</code> key in <code>cofx</code>.  We 
+now want <code>cofx</code> to have other keys and values, like this: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>                     <span class="hljs-comment">;; note: -fx </span>
+   <span class="hljs-symbol">:load-defaults</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx event]                 <span class="hljs-comment">;; cofx means coeffects</span>
+     (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [val (<span class="hljs-symbol">:local-store</span> cofx)  <span class="hljs-comment">;; &lt;-- get data from cofx</span>
+           db  (<span class="hljs-symbol">:db</span> cofx)]          <span class="hljs-comment">;; &lt;-- more data from cofx</span>
+       {<span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:defaults</span> val))})) <span class="hljs-comment">;; returns an effect</span>
+</code></pre>
+<p>Notice how <code>cofx</code> magically contains a <code>:local-store</code> key with the 
+right value. Nice! But how do we make this magic happen? </p>
+<h3 id="abracadabra">Abracadabra</h3>
+<p>Each time an event handler is executed, a brand new <code>context</code> (map)
+is created, and within that <code>context</code> is a <code>:coeffects</code> key which 
+is a further map (initially empty). </p>
+<p>That pristine <code>context</code> value (containing a pristine <code>:coeffects</code> map) is threaded 
+through a chain of Interceptors before it finally reaches our event handler,
+which sits on the end of the chain, itself wrapped up in an interceptor. We know<br>this story well from a previous tutorial. </p>
+<p>So, all members of the Interceptor chain have the opportunity to <code>assoc</code> into <code>:coeffects</code> 
+within their <code>:before</code> function, cumulatively building up what it holds.  Later, our event handler, 
+which sits on the end of the chain, magically finds just the 
+right data (like a value for the key <code>:local-store</code>) in its first <code>cofx</code> argument. 
+So, it is the event handler&apos;s Interceptors which put it there.</p>
+<h3 id="which-interceptors">Which Interceptors?</h3>
+<p>If Interceptors put data in <code>:coeffects</code>, then we&apos;ll need to add the right ones
+when we register our event handler.</p>
+<p>Something like this (this handler is the same as before, except for one detail):    </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span>                     
+   <span class="hljs-symbol">:load-defaults</span>
+   [ (<span class="hljs-name">inject-cofx</span> <span class="hljs-symbol">:local-store</span> <span class="hljs-string">&quot;defaults-key&quot;</span>) ]     <span class="hljs-comment">;; &lt;-- this is new</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx event]         
+     (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [val (<span class="hljs-symbol">:local-store</span> cofx)
+           db  (<span class="hljs-symbol">:db</span> cofx)]  
+       {<span class="hljs-symbol">:db</span> (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:defaults</span> val))}))
+</code></pre>
+<p>Look at that - my event handler has a new Interceptor!  It is injecting the 
+right key/value pair (<code>:local-store</code>)
+into <code>context&apos;s</code> <code>:coeffects</code>, which itself then goes on to be the first argument 
+to our event handler (<code>cofx</code>).</p>
+<h3 id="inject-cofx"><code>inject-cofx</code></h3>
+<p><code>inject-cofx</code> is part of the re-frame API.</p>
+<p>It is a function which returns an Interceptor whose <code>:before</code> function loads 
+a key/value pair into a <code>context&apos;s</code> <code>:coeffects</code> map.</p>
+<p><code>inject-cofx</code> takes either one or two arguments. The first is always the <code>id</code> of the coeffect 
+required (called a <code>cofx-id</code>). The 2nd is an optional addition value. </p>
+<p>So, in the case above, the <code>cofx-id</code> was <code>:local-store</code>  and the additional value 
+was &quot;defaults-key&quot; which was presumably the LocalStore key. </p>
+<h3 id="more-inject-cofx">More <code>inject-cofx</code></h3>
+<p>Here&apos;s some other usage examples:</p>
+<ul>
+<li><code>(inject-cofx :random-int 10)</code> </li>
+<li><code>(inject-cofx :guid)</code></li>
+<li><code>(inject-cofx :now)</code></li>
+</ul>
+<p>I could create an event handler which has access to 3 coeffects:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-fx</span> 
+    <span class="hljs-symbol">:some-id</span> 
+    [(<span class="hljs-name">inject-cofx</span> <span class="hljs-symbol">:random-int</span> <span class="hljs-number">10</span>) (<span class="hljs-name">inject-cofx</span> <span class="hljs-symbol">:now</span>)  (<span class="hljs-name">inject-cofx</span> <span class="hljs-symbol">:local-store</span> <span class="hljs-string">&quot;blah&quot;</span>)]  <span class="hljs-comment">;; 3</span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [cofx _]
+       ... in here I can access cofx&apos;s keys <span class="hljs-symbol">:now</span> <span class="hljs-symbol">:local-store</span> and <span class="hljs-symbol">:random-int</span>))
+</code></pre>
+<p>But that&apos;s probably just greedy, and not very useful.   </p>
+<p>And so, to the final piece in the puzzle: how does <code>inject-cofx</code> 
+know what to do when it is given <code>:now</code> or <code>:local-store</code>? 
+Each <code>cofx-id</code> requires a different action.</p>
+<h3 id="meet-reg-cofx">Meet <code>reg-cofx</code></h3>
+<p>This function is also part of the re-frame API.</p>
+<p>It allows you to associate a <code>cofx-id</code> (like <code>:now</code> or <code>:local-store</code>) with a 
+handler function that injects the right key/value pair.</p>
+<p>The function you register will be passed two arguments:</p>
+<ul>
+<li>a <code>:coeffects</code> map (to which it should add a key/value pair), and </li>
+<li>optionally, the additional value supplied to <code>inject-cofx</code></li>
+</ul>
+<p>and it is expected to return a modified <code>:coeffects</code> map.</p>
+<h3 id="example-of-reg-cofx">Example Of <code>reg-cofx</code></h3>
+<p>Above, we wrote an event handler that wanted <code>:now</code> data to be available.  Here 
+is how a handler could be registered for <code>:now</code>:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-cofx</span>               <span class="hljs-comment">;; registration function</span>
+   <span class="hljs-symbol">:now</span>                 <span class="hljs-comment">;; what cofx-id are we registering</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [coeffects _]    <span class="hljs-comment">;; second parameter not used in this case</span>
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> coeffects <span class="hljs-symbol">:now</span> (<span class="hljs-name">js.Date.</span>))))   <span class="hljs-comment">;; add :now key, with value</span>
+</code></pre>
+<p>The outcome is:    </p>
+<ol>
+<li>because that cofx handler above is now registered for <code>:now</code>, I can </li>
+<li>add an Interceptor to an event handler which </li>
+<li>looks like <code>(inject-cofx :now)</code></li>
+<li>which means within that event handler I can access a <code>:now</code> value from <code>cofx</code></li>
+</ol>
+<p>As a result, my event handler is pure.</p>
+<h3 id="another-example-of-reg-cofx">Another Example Of <code>reg-cofx</code></h3>
+<p>This: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-cofx</span>               <span class="hljs-comment">;; new registration function</span>
+   <span class="hljs-symbol">:local-store</span> 
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [coeffects local-store-key]
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> coeffects 
+             <span class="hljs-symbol">:local-store</span>
+             (<span class="hljs-name">js-&gt;clj</span> (<span class="hljs-name">.getItem</span> js/localStorage local-store-key)))))
+</code></pre>
+<p>With these two registrations in place, I could now use both <code>(inject-cofx :now)</code> and 
+<code>(inject-cofx :local-store &quot;blah&quot;)</code> in an event handler&apos;s interceptor chain. </p>
+<p>To put this another way:  I can&apos;t use <code>(inject-cofx :blah)</code> UNLESS I have previously 
+used <code>reg-cofx</code> to register a handler for <code>:blah</code>. Otherwise <code>inject-cofx</code> doesn&apos;t 
+know how to inject a <code>:blah</code>. </p>
+<h3 id="secret-interceptors">Secret Interceptors</h3>
+<p>In a previous tutorial we learned that <code>reg-events-db</code> 
+and <code>reg-events-fx</code> add Interceptors to the front of any chain 
+during registration. We found they inserted an Interceptor called <code>do-fx</code>. </p>
+<p>I can now reveal that 
+they also add <code>(inject-cofx :db)</code> at the front of each chain.</p>
+<p>Guess what that injects into the <code>:coeffects</code> of every event handler? This is how <code>:db</code>
+is always available to event handlers. </p>
+<p>Okay, so that was the last surprise. Now you know everything.</p>
+<p>If ever you wanted to use DataScript, instead of an atom-containing-a-map
+like <code>app-db</code>, you&apos;d replace <code>reg-event-db</code> and <code>reg-event-fx</code> with your own
+registration functions and have them auto insert the DataScript connection.</p>
+<h3 id="testing">Testing</h3>
+<p>During testing, you may want to stub out certain coeffects.</p>
+<p>You may, for example, want to test that an event handler works 
+using a specific <code>now</code>. </p>
+<p>In your test, you&apos;d mock out the cofx handler:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-cofx</span>
+   <span class="hljs-symbol">:now</span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [coeffects _]
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> coeffects <span class="hljs-symbol">:now</span> (<span class="hljs-name">js/Date.</span> <span class="hljs-number">2016</span> <span class="hljs-number">1</span> <span class="hljs-number">1</span>)))   <span class="hljs-comment">;; now was then</span>
+</code></pre>
+<p>If your test does alter registered coeffect handlers, and you are using <code>cljs.test</code>,
+then you can use a <code>fixture</code> to restore all coeffects at the end of your test: </p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> fixture-re-frame
+  []
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [restore-re-frame (<span class="hljs-name"><span class="hljs-builtin-name">atom</span></span> <span class="hljs-literal">nil</span>)]
+    {<span class="hljs-symbol">:before</span> #(<span class="hljs-name"><span class="hljs-builtin-name">reset!</span></span> restore-re-frame (<span class="hljs-name">re-frame.core/make-restore-fn</span>))
+     <span class="hljs-symbol">:after</span>  #(@restore-re-frame)}))
+
+(<span class="hljs-name">use-fixtures</span> <span class="hljs-symbol">:each</span> (<span class="hljs-name">fixture-re-frame</span>))
+</code></pre>
+<p><code>re-frame.core/make-restore-fn</code> creates a checkpoint for re-frame state (including 
+registered handlers) to which you can return. </p>
+<h3 id="the-5-point-summary">The 5 Point Summary</h3>
+<p>In note form:</p>
+<ol>
+<li>Event handlers should only source data from their arguments</li>
+<li>We want to &quot;inject&quot; required data into the first, cofx argument</li>
+<li>We use the <code>(inject-cofx :key)</code> interceptor in registration of the event handler</li>
+<li>It will look up the registered cofx handler for that <code>:key</code> to do the injection</li>
+<li>We must have previously registered a cofx handler via <code>reg-cofx</code></li>
+</ol>
+<hr>
+<p>Previous:  <a href="Effects.html">Effects</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Up:  <a href="./">Index</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Next:  <a href="SubscriptionInfographic.html">Infographic</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Effects.html" class="navigation navigation-prev " aria-label="Previous page: Effects">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="SubscriptionInfographic.html" class="navigation navigation-next " aria-label="Next page: Infographic">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Coeffects","level":"4.5","depth":1,"next":{"title":"Infographic","level":"5.1","depth":1,"path":"SubscriptionInfographic.md","ref":"SubscriptionInfographic.md","articles":[]},"previous":{"title":"Effects","level":"4.4","depth":1,"path":"Effects.md","ref":"Effects.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Coeffects.md","mtime":"2017-09-21T10:24:52.721Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

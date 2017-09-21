@@ -1,0 +1,1148 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>First Code Walk-Through · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="API.html" />
+    
+    
+    <link rel="prev" href="ApplicationState.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >First Code Walk-Through</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="initial-code-walk-through">Initial Code Walk-through</h2>
+<p>At this point, you are about 55% of the way to understanding re-frame.  You have:</p>
+<ul>
+<li>an overview of the 6 domino process <a href="../">from this repo&apos;s README</a></li>
+<li>an understanding of app state (<a href="ApplicationState.html">from the previous tutorial</a>)</li>
+</ul>
+<p>In this tutorial, <strong>we look at re-frame code</strong>. By the end of it, you&apos;ll be at 70% knowledge, and ready to start coding an app.</p>
+<h2 id="what-code">What Code?</h2>
+<p>This repo contains an <code>/examples</code> application called <a href="https://github.com/Day8/re-frame/tree/master/examples/simple" target="_blank">&quot;simple&quot;</a>,
+which contains 70 lines of code. We&apos;ll look at every line of <a href="https://github.com/Day8/re-frame/blob/master/examples/simple/src/simple/core.cljs" target="_blank">the file</a>.</p>
+<p>This app:</p>
+<ul>
+<li>displays the current time in a nice big, colourful font</li>
+<li>provides a single text input field, into which you can type a hex colour code, 
+like &quot;#CCC&quot;, used for the time display</li>
+</ul>
+<p>When it is running, here&apos;s what it looks like:</p>
+<p><img src="../images/example_app.png" alt="Example App image"></p>
+<p>To run the code yourself: </p>
+<ul>
+<li>Install Java 8 </li>
+<li>Install leiningen  (<a href="http://leiningen.org/#install" target="_blank">http://leiningen.org/#install</a>)</li>
+</ul>
+<p>Then:</p>
+<ol>
+<li><code>git clone https://github.com/Day8/re-frame.git</code></li>
+<li><code>cd re-frame/examples/simple</code></li>
+<li><code>lein do clean, figwheel</code></li>
+<li>wait a minute and then open <a href="http://localhost:3449/example.html" target="_blank">http://localhost:3449/example.html</a></li>
+</ol>
+<p>So, what&apos;s just happened?  The ClojureScript code under <code>/src</code> has been compiled into <code>javascript</code> and
+put into <code>/resources/public/js/client.js</code> which is loaded into <code>/resources/public/example.html</code> (the HTML you just opened)</p>
+<p>Figwheel provides for hot-loading, so you can edit the source code (under <code>/src</code>)and watch the loaded HTML change.</p>
+<h2 id="namespace">Namespace</h2>
+<p>Because this example is tiny, the source code is in a single namespace:
+<a href="https://github.com/Day8/re-frame/blob/master/examples/simple/src/simple/core.cljs" target="_blank">https://github.com/Day8/re-frame/blob/master/examples/simple/src/simple/core.cljs</a></p>
+<p>Within this namespace, we&apos;ll need access to both <code>reagent</code> and <code>re-frame</code>. 
+So, at the top, we start like this: </p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">ns</span></span> simple.core
+  (<span class="hljs-symbol">:require</span> [reagent.core <span class="hljs-symbol">:as</span> reagent]
+            [re-frame.core <span class="hljs-symbol">:as</span> rf]))
+</code></pre>
+<h2 id="data-schema">Data Schema</h2>
+<p>Now, normally, I&apos;d strongly recommended that you write a quality schema
+for your application state (the data stored in <code>app-db</code>). But,
+here, to minimise cognitive load, we&apos;ll cut that corner.</p>
+<p>But ... we can&apos;t cut it completely. You&apos;ll still need an
+informal description, and here it is ... for this app <code>app-db</code> will contain
+a two-key map like this:</p>
+<pre><code class="lang-cljs">{:time       (js/Date.)  ;; current time for display
+ :time-color &quot;#f88&quot;}     ;; the colour in which the time should be shown
+</code></pre>
+<p>re-frame itself owns/manages <code>app-db</code> (see FAQ #1), and it will
+supply the value within it (the two-key map described above) 
+to your various handlers as required.</p>
+<h2 id="events-domino-1">Events (domino 1)</h2>
+<p>Events are data.</p>
+<p>re-frame uses a vector
+format for events. For example:</p>
+<pre><code class="lang-clj">[<span class="hljs-symbol">:delete-item</span> <span class="hljs-number">42</span>]
+</code></pre>
+<p>The first element in the vector is a keyword which identifies the <code>kind</code> of <code>event</code>. The
+further elements are optional, and can provide additional data 
+associated with the event. The additional value above, <code>42</code>, is 
+presumably the id of the item to delete.</p>
+<p>Here are some other example events:</p>
+<pre><code class="lang-clj">[<span class="hljs-symbol">:admit-to-being-satoshi</span> <span class="hljs-literal">false</span>]
+[<span class="hljs-symbol">:dressing/put-pants-on</span>  <span class="hljs-string">&quot;velour flares&quot;</span> {<span class="hljs-symbol">:method</span> <span class="hljs-symbol">:left-leg-first</span> <span class="hljs-symbol">:belt</span> <span class="hljs-literal">false</span>}]
+</code></pre>
+<p>(For non-trivial applications, the <code>kind</code> keyword will be namespaced.)</p>
+<p><strong>Rule</strong>:  events are pure data. No sneaky tricks like putting
+callback functions on the wire. You know who you are.</p>
+<h3 id="dispatch">dispatch</h3>
+<p>To send an event, call <code>dispatch</code> with the event vector as argument: </p>
+<pre><code class="lang-clj">   (<span class="hljs-name">rf/dispatch</span> [<span class="hljs-symbol">:event-id</span>  value1 value2])
+</code></pre>
+<p>In this &quot;simple&quot; app, a <code>:timer</code> event is dispatched every second:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> dispatch-timer-event
+  []
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [now (<span class="hljs-name">js/Date.</span>)]
+    (<span class="hljs-name">rf/dispatch</span> [<span class="hljs-symbol">:timer</span> now])))  <span class="hljs-comment">;; &lt;-- dispatch used</span>
+
+<span class="hljs-comment">;; call the dispatching function every second</span>
+(<span class="hljs-name"><span class="hljs-builtin-name">defonce</span></span> do-timer (<span class="hljs-name">js/setInterval</span> dispatch-timer-event <span class="hljs-number">1000</span>))
+</code></pre>
+<p>This is an unusual source of events. Normally, it is an app&apos;s UI widgets which 
+<code>dispatch</code> events (in response to user actions), or an HTTP POST&apos;s 
+<code>on-success</code> handler, or a websocket which gets a new packet.</p>
+<h3 id="after-dispatch">After dispatch</h3>
+<p><code>dispatch</code> puts an event into a queue for processing.</p>
+<p>So, <strong>an event is not processed synchronously, like a function call</strong>. The processing
+happens <strong>later</strong> - asynchronously. Very soon, but not now.</p>
+<p>The consumer of the queue is a <code>router</code> which looks after the event&apos;s processing.</p>
+<p>The <code>router</code>:</p>
+<ol>
+<li>inspects the 1st element of an event vector</li>
+<li>looks for the event handler (function) which is <strong>registered</strong>
+for this kind of event</li>
+<li>calls that event handler with the necessary arguments</li>
+</ol>
+<p>As a re-frame app developer, your job, then, is to write and register an
+event handler (function) for each kind of event. </p>
+<h2 id="event-handlers-domino-2">Event Handlers (domino 2)</h2>
+<p>Collectively, event handlers provide the control logic in a re-frame application.</p>
+<p>In this application, 3 kinds of event are dispatched: 
+  <code>:initialize</code>
+  <code>:time-color-change</code>
+  <code>:timer</code></p>
+<p>3 events means we&apos;ll be registering 3 event handlers.</p>
+<h3 id="two-ways-to-register">Two ways to register</h3>
+<p>Event handler functions take two arguments <code>coeffects</code> and <code>event</code>, 
+and they return <code>effects</code>.</p>
+<p>Conceptually, you can think of <code>coeffects</code> as being &quot;the current state of the world&quot;. 
+And you can think of event handlers has computing and returning changes (effects) based on 
+&quot;the current state of the world&quot; and the arriving event.</p>
+<p>Event handlers can be registered via either <code>reg-event-fx</code>
+or <code>reg-event-db</code>  (<code>-fx</code> vs <code>-db</code>): </p>
+<ul>
+<li><code>reg-event-fx</code> can take multiple <code>coeffects</code> and can return multiple <code>effects</code>, while </li>
+<li><code>reg-event-db</code> allows you to write simpler handlers for the common case where you want 
+them to take only one <code>coeffect</code> - the current app state - and return one <code>effect</code> - the 
+updated app state.</li>
+</ul>
+<p>Because of its simplicity, we&apos;ll be using the latter here: <code>reg-event-db</code>. </p>
+<h3 id="reg-event-db">reg-event-db</h3>
+<p>We register event handlers using re-frame&apos;s <code>reg-event-db</code>:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-event-db</span>
+  <span class="hljs-symbol">:the-event-id</span>
+  the-event-handler-fn)
+</code></pre>
+<p>The handler function you provide should expect two arguments:</p>
+<ul>
+<li><code>db</code>, the current application state  (the value contained in <code>app-db</code>)</li>
+<li><code>v</code>,  the event vector  (what was given to <code>dispatch</code>)</li>
+</ul>
+<p>So, your function will have a signature like this: <code>(fn [db v] ...)</code>.</p>
+<p>Each event handler must compute and return the new state of
+the application, which means it returns a
+modified version of <code>db</code> (or an unmodified one, if there are to be no changes to the state).</p>
+<h3 id="initialize">:initialize</h3>
+<p>On startup, application state must be initialized. We
+want to put a sensible value into <code>app-db</code>, which starts out containing <code>{}</code>.</p>
+<p>So a <code>(dispatch [:initialize])</code> will happen early in the 
+app&apos;s life (more on this below), and we need to write an <code>event handler</code>
+for it. </p>
+<p>Now this event handler is slightly unusual because not only does it not care about
+any event information passed in via the <code>event</code> vector, but it doesn&apos;t 
+even care about the existing value in <code>db</code> - it just wants to plonk 
+a completely new value:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-event-db</span>              <span class="hljs-comment">;; sets up initial application state</span>
+  <span class="hljs-symbol">:initialize</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [_ _]                   <span class="hljs-comment">;; the two parameters are not important here, so use _</span>
+    {<span class="hljs-symbol">:time</span> (<span class="hljs-name">js/Date.</span>)         <span class="hljs-comment">;; What it returns becomes the new application state</span>
+     <span class="hljs-symbol">:time-color</span> <span class="hljs-string">&quot;#f88&quot;</span>}))    <span class="hljs-comment">;; so the application state will initially be a map with two keys</span>
+</code></pre>
+<p>This particular handler <code>fn</code> ignores the two parameters
+(usually called <code>db</code> and <code>v</code>) and simply returns 
+a map literal, which becomes the application 
+state.</p>
+<p>For comparison, here&apos;s how we would have written this if we&apos;d cared about the existing value of <code>db</code>: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-event-db</span>
+  <span class="hljs-symbol">:initialize</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]                 <span class="hljs-comment">;; we use db this time, so name it</span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> db
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> <span class="hljs-symbol">:time</span> (<span class="hljs-name">js/Date.</span>))
+      (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> <span class="hljs-symbol">:time-color</span> <span class="hljs-string">&quot;#f88&quot;</span>)))
+</code></pre>
+<h3 id="timer">:timer</h3>
+<p>Earlier, we set up a timer function to <code>(dispatch [:timer now])</code> every second.</p>
+<p>Here&apos;s how we handle it: </p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-event-db</span>                 <span class="hljs-comment">;; usage:  (rf/dispatch [:timer a-js-Date])</span>
+  <span class="hljs-symbol">:timer</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ new-time]]          <span class="hljs-comment">;; &lt;-- de-structure the event vector</span>
+    (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:time</span> new-time)))  <span class="hljs-comment">;; compute and return the new application state</span>
+</code></pre>
+<p>Notes:</p>
+<ol>
+<li>the <code>event</code> will be like <code>[:timer a-time]</code>, so the 2nd <code>v</code> parameter 
+destructures to extract the <code>a-time</code> value</li>
+<li>the handler computes a new application state from <code>db</code>, and returns it</li>
+</ol>
+<h3 id="time-color-change">:time-color-change</h3>
+<p>When the user enters a new colour value (via an input text box):</p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-event-db</span>
+  <span class="hljs-symbol">:time-color-change</span>            <span class="hljs-comment">;; usage:  (rf/dispatch [:time-color-change 34562])</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db [_ new-color-value]]
+    (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:time-color</span> new-color-value)))   <span class="hljs-comment">;; compute and return the new application state</span>
+</code></pre>
+<h2 id="effect-handlers-domino-3">Effect Handlers (domino 3)</h2>
+<p>Domino 3 realises/puts into action the <code>effects</code> returned by event handlers.</p>
+<p>In this &quot;simple&quot; application, our event handlers are implicitly returning 
+only one effect: &quot;update application state&quot;. </p>
+<p>This particular <code>effect</code> is accomplished by a re-frame-supplied 
+<code>effect</code> handler. <strong>So, there&apos;s nothing for us to do for this domino</strong>. We are 
+using a standard re-frame effect handler.</p>
+<p>And this is not unusual. You&apos;ll seldom have to write <code>effect</code> handlers, but in a later
+tutorial we&apos;ll show you more about how to do so when you need to.</p>
+<h2 id="subscription-handlers-domino-4">Subscription Handlers (domino 4)</h2>
+<p>Subscription handlers, or <code>query</code> functions, take application state as an argument 
+and run a query over it, returning something called
+a &quot;materialised view&quot; of that application state.</p>
+<p>When the application state changes, subscription functions are 
+re-run by re-frame, to compute new values (new materialised views).</p>
+<p>Ultimately, the data returned by <code>query</code> functions is used
+in the <code>view</code> functions (Domino 5).</p>
+<p>One subscription can 
+source data from other subscriptions. So it is possible to 
+create a tree of dependencies.</p>
+<p>The Views (Domino 5) are the leaves of this tree.  The tree&apos;s 
+root is <code>app-db</code> and the intermediate nodes between the two 
+are computations being performed by the query functions of Domino 4.</p>
+<p>Now, the two examples below are trivial. They just extract part of the application
+state and return it. So, there&apos;s virtually no computation. A more interesting tree
+of subscriptions, and more explanation, can be found in the todomvc example.</p>
+<h3 id="reg-sub">reg-sub</h3>
+<p><code>reg-sub</code> associates a <code>query id</code> with a function that computes
+ that query, like this:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-sub</span>
+  <span class="hljs-symbol">:some-query-id</span>  <span class="hljs-comment">;; query id (used later in subscribe)</span>
+  a-query-fn)     <span class="hljs-comment">;; the function which will compute the query</span>
+</code></pre>
+<p>Then later, a view function (domino 5) subscribes to a query like this:
+<code>(subscribe [:some-query-id])</code>, and <code>a-query-fn</code> will be used 
+to perform the query over the application state.</p>
+<p>Each time application state changes, <code>a-query-fn</code> will be
+called again to compute a new materialised view (a new computation over app state)
+and that new value will be given to all <code>view</code> functions which are subscribed
+to <code>:some-query-id</code>. These <code>view</code> functions will then be called to compute the 
+new DOM state (because the views depend on query results which have changed).</p>
+<p>Along this reactive chain of dependencies, re-frame will ensure the 
+necessary calls are made, at the right time.</p>
+<p>Here&apos;s the code:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">rf/reg-sub</span>
+  <span class="hljs-symbol">:time</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]     <span class="hljs-comment">;; db is current app state. 2nd unused param is query vector</span>
+    (<span class="hljs-symbol">:time</span> db))) <span class="hljs-comment">;; return a query computation over the application state</span>
+
+(<span class="hljs-name">rf/reg-sub</span>
+  <span class="hljs-symbol">:time-color</span>
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> [db _]
+    (<span class="hljs-symbol">:time-color</span> db)))
+</code></pre>
+<p>Like I said, both of these queries are trivial. 
+See <a href="https://github.com/Day8/re-frame/blob/master/examples/todomvc/src/todomvc/subs.cljs" target="_blank">todomvc.subs.clj</a> 
+for more interesting ones.</p>
+<h2 id="view-functions-domino-5">View Functions (domino 5)</h2>
+<p><code>view</code> functions turn data into DOM.  They are &quot;State in, Hiccup out&quot; and they are Reagent 
+components. </p>
+<p>An SPA will have lots of <code>view</code> functions, and collectively, 
+they render the app&apos;s entire UI.</p>
+<h3 id="hiccup">Hiccup</h3>
+<p><code>Hiccup</code> is a data format for representing HTML.</p>
+<p>Here&apos;s a trivial view function which returns hiccup-formatted data:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> greet
+  []
+  [<span class="hljs-symbol">:div</span> <span class="hljs-string">&quot;Hello viewers&quot;</span>])  <span class="hljs-comment">;; means &lt;div&gt;Hello viewers&lt;/div&gt;</span>
+</code></pre>
+<p>And if we call it:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">greet</span>)
+<span class="hljs-comment">;; ==&gt;  [:div &quot;Hello viewers&quot;]</span>
+
+(<span class="hljs-name"><span class="hljs-builtin-name">first</span></span> (<span class="hljs-name">greet</span>))
+<span class="hljs-comment">;; ==&gt; :div</span>
+</code></pre>
+<p>Yep, that&apos;s a vector with two elements: a keyword and a string.</p>
+<p>Now, <code>greet</code> is pretty simple because it only has the &quot;Hiccup Out&quot; part.  There&apos;s no &quot;Data In&quot;.</p>
+<h3 id="subscribing">Subscribing</h3>
+<p>To render the DOM representation of some part of the app state, view functions must query 
+for that part of <code>app-db</code>, and that means using <code>subscribe</code>.</p>
+<p><code>subscribe</code> is always called like this:</p>
+<pre><code class="lang-Clojure">   (<span class="hljs-name">rf/subscribe</span>  [query-id some optional query parameters])
+</code></pre>
+<p>There&apos;s only one (global) <code>subscribe</code> function and it takes one argument, assumed to be a vector.</p>
+<p>The first element in the vector (shown above as <code>query-id</code>) identifies the query, 
+and the other elements are optional
+query parameters. With a traditional database a query might be:</p>
+<pre><code>select * from customers where name=&quot;blah&quot;
+</code></pre><p>In re-frame, that would be done as follows:
+   <code>(subscribe  [:customer-query &quot;blah&quot;])</code>,
+which would return a <code>ratom</code> holding the customer state (a value which might change over time!).</p>
+<blockquote>
+<p>Because subscriptions return a ratom, they must always be dereferenced to 
+obtain the value. This is a recurring trap for newbies.</p>
+</blockquote>
+<h3 id="the-view-functions">The View Functions</h3>
+<p>This view function renders the clock:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> clock
+  []
+  [<span class="hljs-symbol">:div.example-clock</span>
+   {<span class="hljs-symbol">:style</span> {<span class="hljs-symbol">:color</span> @(<span class="hljs-name">rf/subscribe</span> [<span class="hljs-symbol">:time-color</span>])}}
+   (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> @(<span class="hljs-name">rf/subscribe</span> [<span class="hljs-symbol">:time</span>])
+       .toTimeString
+       (<span class="hljs-name">clojure.string/split</span> <span class="hljs-string">&quot; &quot;</span>)
+       first)])
+</code></pre>
+<p>As you can see, it uses <code>subscribe</code> twice to obtain two pieces of data from <code>app-db</code>. 
+If either change, re-frame will re-run this view function.</p>
+<p>And this view function renders the input field:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> color-input
+  []
+  [<span class="hljs-symbol">:div.color-input</span>
+   <span class="hljs-string">&quot;Time color: &quot;</span>
+   [<span class="hljs-symbol">:input</span> {<span class="hljs-symbol">:type</span> <span class="hljs-string">&quot;text&quot;</span>
+            <span class="hljs-symbol">:value</span> @(<span class="hljs-name">rf/subscribe</span> [<span class="hljs-symbol">:time-color</span>])        <span class="hljs-comment">;; subscribe</span>
+            <span class="hljs-symbol">:on-change</span> #(<span class="hljs-name">rf/dispatch</span> [<span class="hljs-symbol">:time-color-change</span> (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> % .-target .-value)])}]])  <span class="hljs-comment">;; &lt;---</span>
+</code></pre>
+<p>Notice how it does BOTH a <code>subscribe</code> to obtain the current value AND 
+a <code>dispatch</code> to say when it has changed. </p>
+<p>It is very common for view functions to run event-dispatching functions. 
+The user&apos;s interaction with the UI is usually the largest source of events.</p>
+<p>And then a <code>view</code> function to bring the others together, which contains no 
+subscriptions or dispatching of its own:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> ui
+  []
+  [<span class="hljs-symbol">:div</span>
+   [<span class="hljs-symbol">:h1</span> <span class="hljs-string">&quot;Hello world, it is now&quot;</span>]
+   [clock]
+   [color-input]])
+</code></pre>
+<p>Note: <code>view</code> functions tend to be organized into a hierarchy, often with 
+data flowing from parent to child via
+parameters. So, not every view function needs a subscription. Very often 
+the values passed in from a parent component are sufficient.</p>
+<p>Note: <code>view</code> functions should never directly access <code>app-db</code>. Data is 
+only ever sourced via subscriptions.</p>
+<h3 id="components-like-templates">Components Like Templates?</h3>
+<p><code>view</code> functions are like the templates you&apos;d find in
+Django, Rails, Handlebars or Mustache -- they map data to HTML -- except for two massive differences:</p>
+<ol>
+<li>you have the full power of ClojureScript available to you (generating a Clojure data structure). The
+downside is that these are not &quot;designer friendly&quot; HTML templates.</li>
+<li>these templates are reactive.  When their input Signals change, they
+are automatically rerun, producing new DOM. Reagent adroitly shields you from the details, but
+the renderer of any <code>component</code> is wrapped by a <code>reaction</code>.  If any of the &quot;inputs&quot;
+to that renderer change, the renderer is rerun.</li>
+</ol>
+<h2 id="kick-starting-the-app">Kick Starting The App</h2>
+<p>Below, <code>run</code> is called to kick off the application once the HTML page has loaded.</p>
+<p>It has two tasks:</p>
+<ol>
+<li>Load the initial application state</li>
+<li>Load the GUI by &quot;mounting&quot; the root-level function in the hierarchy 
+of <code>view</code> functions -- in our case, <code>ui</code> --
+onto an existing DOM element. </li>
+</ol>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> ^<span class="hljs-symbol">:export</span> run
+  []
+  (<span class="hljs-name">rf/dispatch-sync</span> [<span class="hljs-symbol">:initialize</span>])     <span class="hljs-comment">;; puts a value into application state</span>
+  (<span class="hljs-name">reagent/render</span> [ui]              <span class="hljs-comment">;; mount the application&apos;s ui into &apos;&lt;div id=&quot;app&quot; /&gt;&apos;</span>
+                  (<span class="hljs-name">js/document.getElementById</span> <span class="hljs-string">&quot;app&quot;</span>)))
+</code></pre>
+<p>After <code>run</code> is called, the app passively waits for <code>events</code>. 
+Nothing happens without an <code>event</code>.</p>
+<p>When it comes to establishing initial application state, you&apos;ll 
+notice the use of <code>dispatch-sync</code>, rather than <code>dispatch</code>. This is a simplifying cheat 
+which ensures that a correct
+structure exists in <code>app-db</code> before any subscriptions or event handlers run. </p>
+<h2 id="summary">Summary</h2>
+<p><strong>Your job</strong>, when building an app, is to: </p>
+<ul>
+<li>design your app&apos;s information model (data and schema layer)</li>
+<li>write and register event handler functions  (control and transition layer)  (domino 2)</li>
+<li>(once in a blue moon) write and register effect and coeffect handler 
+functions (domino 3) which do the mutative dirty work of which we dare not 
+speak in a pure, immutable functional context. Most of the time, you&apos;ll be 
+using standard, supplied ones.</li>
+<li>write and register query functions which implement nodes in a signal graph (query layer) (domino 4)</li>
+<li>write Reagent view functions  (view layer)  (domino 5)</li>
+</ul>
+<h2 id="next-steps">Next Steps</h2>
+<p>You should now take time to carefully review the 
+<a href="https://github.com/Day8/re-frame/tree/master/examples/todomvc" target="_blank">todomvc example application</a>.
+On the one hand, it contains a lot of very helpful practical advice. On the other, it does
+use some more advanced features like <code>interceptors</code> which are covered later in the docs.   </p>
+<p>After that, you&apos;ll be ready to write your own code.  Perhaps you will use a
+template to create your own project: <br>
+Client only:  <a href="https://github.com/Day8/re-frame-template" target="_blank">https://github.com/Day8/re-frame-template</a>  <br>
+Full Stack: <a href="http://www.luminusweb.net/" target="_blank">http://www.luminusweb.net/</a></p>
+<p>Obviously, you should also go on to read the further documentation.</p>
+<hr>
+<p>Previous:  <a href="ApplicationState.html">app-db (Application State)</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Up:  <a href="./">Index</a>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;
+Next:  <a href="API.html">The API</a></p>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ApplicationState.html" class="navigation navigation-prev " aria-label="Previous page: app-db (Application State)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="API.html" class="navigation navigation-next " aria-label="Next page: The API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"First Code Walk-Through","level":"2.3","depth":1,"next":{"title":"The API","level":"2.4","depth":1,"path":"API.md","ref":"API.md","articles":[]},"previous":{"title":"app-db (Application State)","level":"2.2","depth":1,"path":"ApplicationState.md","ref":"ApplicationState.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"CodeWalkthrough.md","mtime":"2017-09-21T10:24:52.721Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1097 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Debugging · re-frame</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Testing.html" />
+    
+    
+    <link rel="prev" href="Debugging-Event-Handlers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">description: re-frame official documentation</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Derived Values, Flowing</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    This Repo's README
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ApplicationState.html">
+            
+                <a href="ApplicationState.html">
+            
+                    
+                    app-db (Application State)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="CodeWalkthrough.html">
+            
+                <a href="CodeWalkthrough.html">
+            
+                    
+                    First Code Walk-Through
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="API.html">
+            
+                <a href="API.html">
+            
+                    
+                    The API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="MentalModelOmnibus.html">
+            
+                <a href="MentalModelOmnibus.html">
+            
+                    
+                    Mental Model Omnibus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Alternative Introductions</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/re-frame-building-blocks/">
+            
+                    
+                    purelyfunctional.tv
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dominoes 2 and 3 - Event Handlers</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="EventHandlingInfographic.html">
+            
+                <a href="EventHandlingInfographic.html">
+            
+                    
+                    Infographic Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="EffectfulHandlers.html">
+            
+                <a href="EffectfulHandlers.html">
+            
+                    
+                    Effectful Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="Interceptors.html">
+            
+                <a href="Interceptors.html">
+            
+                    
+                    Interceptors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="Effects.html">
+            
+                <a href="Effects.html">
+            
+                    
+                    Effects
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="Coeffects.html">
+            
+                <a href="Coeffects.html">
+            
+                    
+                    Coeffects
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 4 - Subscriptions</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="SubscriptionInfographic.html">
+            
+                <a href="SubscriptionInfographic.html">
+            
+                    
+                    Infographic
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="SubscriptionsCleanup.html">
+            
+                <a href="SubscriptionsCleanup.html">
+            
+                    
+                    Correcting a wrong
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="SubscriptionFlow.html">
+            
+                <a href="SubscriptionFlow.html">
+            
+                    
+                    Flow Mechanics
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Domino 5 - Reagent Tutorials</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" >
+            
+                <a target="_blank" href="https://github.com/Day8/re-frame/wiki#reagent-tutorials">
+            
+                    
+                    The Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" >
+            
+                <a target="_blank" href="https://lambdaisland.com/episodes">
+            
+                    
+                    Lambda Island Videos
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" >
+            
+                <a target="_blank" href="https://purelyfunctional.tv/guide/reagent/">
+            
+                    
+                    purelyfunctional.tv 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" >
+            
+                <a target="_blank" href="http://timothypratley.blogspot.com.au/p/p.html">
+            
+                    
+                    Reagent Deep Dive Series from Timothy Pratley
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" >
+            
+                <a target="_blank" href="https://www.martinklepsch.org/posts/props-children-and-component-lifecycle-in-reagent.html">
+            
+                    
+                    Props, Children & Component Lifecycle
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Structure</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="Basic-App-Structure.html">
+            
+                <a href="Basic-App-Structure.html">
+            
+                    
+                    Basic App Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.2" data-path="Navigation.html">
+            
+                <a href="Navigation.html">
+            
+                    
+                    Navigation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="7.3" data-path="Namespaced-Keywords.html">
+            
+                <a href="Namespaced-Keywords.html">
+            
+                    
+                    Namespaced Keywords
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">App Data</li>
+        
+        
+    
+        <li class="chapter " data-level="8.1" data-path="Loading-Initial-Data.html">
+            
+                <a href="Loading-Initial-Data.html">
+            
+                    
+                    Loading Initial Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.2" data-path="Talking-To-Servers.html">
+            
+                <a href="Talking-To-Servers.html">
+            
+                    
+                    Talking To Servers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8.3" data-path="Subscribing-To-External-Data.html">
+            
+                <a href="Subscribing-To-External-Data.html">
+            
+                    
+                    Subscribing to External Data
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Debugging And Testing</li>
+        
+        
+    
+        <li class="chapter " data-level="9.1" data-path="Debugging-Event-Handlers.html">
+            
+                <a href="Debugging-Event-Handlers.html">
+            
+                    
+                    Debugging Event Handlers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="9.2" data-path="Debugging.html">
+            
+                <a href="Debugging.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9.3" data-path="Testing.html">
+            
+                <a href="Testing.html">
+            
+                    
+                    Testing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Miscellaneous</li>
+        
+        
+    
+        <li class="chapter " data-level="10.1" data-path="FAQs/">
+            
+                <a href="FAQs/">
+            
+                    
+                    FAQs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="External-Resources.html">
+            
+                <a href="External-Resources.html">
+            
+                    
+                    External Resources
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="Performance-Problems.html">
+            
+                <a href="Performance-Problems.html">
+            
+                    
+                    Eek! Performance Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.4" data-path="Solve-the-CPU-hog-problem.html">
+            
+                <a href="Solve-the-CPU-hog-problem.html">
+            
+                    
+                    Solve the CPU hog problem
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.5" data-path="Using-Stateful-JS-Components.html">
+            
+                <a href="Using-Stateful-JS-Components.html">
+            
+                    
+                    Using Stateful JS Components
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.6" data-path="The-re-frame-logo.html">
+            
+                <a href="The-re-frame-logo.html">
+            
+                    
+                    The re-frame Logo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.7" data-path="Code-Of-Conduct.html">
+            
+                <a href="Code-Of-Conduct.html">
+            
+                    
+                    Code Of Conduct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Debugging</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="debugging">Debugging</h2>
+<p>This page describes a technique for 
+debugging re-frame apps. It proposes a particular combination 
+of tools.</p>
+<h2 id="know-the-beast">Know The Beast!</h2>
+<p>re-frame apps are <strong>event driven</strong>.</p>
+<p>Event driven apps have this core, perpetual loop:</p>
+<ol>
+<li>your app is in some quiescent state, patiently waiting for the next event</li>
+<li>an event arrives (because the user presses a button, a websocket gets data, etc)</li>
+<li>computation/processing follows as the event is handled, leading to changes in app state, the UI, etc</li>
+<li>Goto 1</li>
+</ol>
+<p>When debugging an event driven system, our focus will be step 3. </p>
+<h2 id="re-frames-step-3">re-frame&apos;s Step 3</h2>
+<p>With re-frame, step 3 happens like a <strong>domino sequence</strong>: an event arrives and 
+then bang, bang, bang, one domino triggers the next:</p>
+<ul>
+<li>Event dispatch</li>
+<li>Event handling</li>
+<li>Effects handling </li>
+<li>subscription handlers</li>
+<li>view functions</li>
+</ul>
+<p>Every single event is processed in the same way.  Every single one.  A delightfully 
+regular environment to understand and debug!</p>
+<h2 id="observe-the-beast">Observe The Beast</h2>
+<p>Bret Victor has explained to us the importance of <strong>observability</strong>.
+In which case, when we are debugging re-frame, what do we want to observe?</p>
+<p>re-frame&apos;s domino process involves <em>data values flowing in 
+and out of relatively simple, pure functions</em>.  Derived data flowing. 
+So, to debug we want to observe:</p>
+<ul>
+<li>which functions are called</li>
+<li>what data flowed in and out of them</li>
+</ul>
+<p>Functions and data:  What data was in the event?  What event handler 
+was then called?  What interceptors then ran? What state changes did 
+that event handler cause?  What subscription handlers were then 
+triggered?  What new values did they then return? And which Reagent 
+components then rerendered? What hiccup did they return?  It&apos;s all 
+just functions processing data.</p>
+<p>So, in Clojurescript, how do we observe functions and data?  Well, 
+as luck would have it, ClojureScript is a lisp and it is readily <strong>traceable</strong>.  </p>
+<h2 id="how-to-trace">How To Trace?</h2>
+<p>Below, I suggest a particular combination of technologies which, working together,
+will write a trace to the devtools console. Sorry, but there&apos;s no fancy 
+SVG dashboard.  We said simple, right?</p>
+<p>First, use <code>clairvoyant</code> to trace function calls and data flow. We&apos;ve had 
+a couple of Clairvoyant PRs accepted, and they make it work well for us.
+We&apos;ve also written a specific Clairvoyant tracer tuned for our re-frame 
+needs. <a href="https://clojars.org/day8/re-frame-tracer" target="_blank">https://clojars.org/day8/re-frame-tracer</a>. </p>
+<p>Second, use cljs-devtools because it allows you to inspect traced data. 
+<s>That means you&apos;ll need to be using a very fresh version of Chrome. 
+But it is worth it.</s></p>
+<p>Finally, because we want you to easily scan, parse and drill into trace 
+data, we&apos;ll be using Chrome devtool&apos;s <code>console.group()</code> and <code>console.endGroup()</code>.</p>
+<h2 id="your-browser">Your browser</h2>
+<p>You&apos;ll need to install <code>clj-devtools</code> by following these <a href="https://github.com/binaryage/cljs-devtools" target="_blank">instructions</a>.</p>
+<h2 id="your-project">Your Project</h2>
+<p>Add these to your project.clj <code>:dependencies</code>. First up a private fork of clairvoyant.</p>
+<p><a href="http://clojars.org/org.clojars.stumitchell/clairvoyant" target="_blank"><img src="http://clojars.org/org.clojars.stumitchell/clairvoyant/latest-version.svg" alt="Clojars Project"></a></p>
+<p>Then the customised tracer for cljs-devtools that includes a colour choice
+<a href="http://clojars.org/day8/re-frame-tracer" target="_blank"><img src="http://clojars.org/day8/re-frame-tracer/latest-version.svg" alt="Clojars Project"></a></p>
+<p>Next, we&apos;re going to assume that you have structured you app in the <a href="https://github.com/Day8/re-frame/tree/master/examples/todomvc/src/todomvc" target="_blank">recommended way</a>,
+meaning you have the namespaces <code>events.cljs</code>, <code>subs.cljs</code> and <code>views.cljs</code>.
+It is the functions within these namespaces that we wish to trace.  </p>
+<ol>
+<li><p>At the top of each add these namespaces, add these requires:</p>
+<pre><code class="lang-cljs"> [clairvoyant.core :refer-macros [trace-forms]]
+ [re-frame-tracer.core :refer [tracer]]
+</code></pre>
+</li>
+<li><p>Then, immediately after the <code>ns</code> form add (if you want a green colour):</p>
+<pre><code class="lang-cljs">(trace-forms {:tracer (tracer :color &quot;green&quot;)}
+</code></pre>
+</li>
+<li><p>Finally, put in a closing <code>)</code> at the end of the file. Now all functions within the 
+<code>ns</code> will be traced.  It that is too noisy -- perhaps you won&apos;t want to trace all the helper functions --
+then you can move the wrapping macros <code>trace-froms</code>
+around to suit your needs.</p>
+</li>
+<li><p>Colour choice</p>
+<p>We have sauntered in the direction of the following colours</p>
+<p>|    file      | colour|
+|--------------|-------|
+|<code>handlers.clj</code>| green |
+|<code>subs.cljs</code>   | brown |
+|<code>views.clj</code>   | gold  |</p>
+<p>But I still think orange, flared pants are a good look.  So, yeah.  You may end up choosing others. </p>
+</li>
+</ol>
+<h2 id="say-no-to-anonymous">Say No To Anonymous</h2>
+<p>To get good quality tracing, you need to provide names for all 
+your functions.  So, don&apos;t let handlers be anonymous when registering them. </p>
+<p>For example, make sure you name the renderer in a Form2 component:</p>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> my-view
+  []
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [name   (<span class="hljs-name">subscribe</span> [<span class="hljs-symbol">:name</span>])]
+    (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> my-view-renderer []                <span class="hljs-comment">;;   &lt;--  name it!! </span>
+      [<span class="hljs-symbol">:div</span> @name])))
+</code></pre>
+<p>And name those event handlers:</p>
+<pre><code class="lang-clj">(<span class="hljs-name">reg-event-db</span>
+  <span class="hljs-symbol">:blah</span>
+  [interceptors]
+  (<span class="hljs-name"><span class="hljs-builtin-name">fn</span></span> blah-handler    <span class="hljs-comment">;;   &lt;-- name it</span>
+    [db v]       
+    (<span class="hljs-name"><span class="hljs-builtin-name">assoc</span></span> db <span class="hljs-symbol">:blah</span> <span class="hljs-literal">true</span>)))
+</code></pre>
+<h2 id="important">IMPORTANT</h2>
+<p><strong>By default, our clairvoyant fork does not produce any trace!!</strong> </p>
+<p>You must throw a compile-time switch for tracing to be included into development builds. </p>
+<p>If you are using <code>lein</code>, do this in your <code>project.clj</code> file:</p>
+<pre><code class="lang-clj"><span class="hljs-symbol">:cljsbuild</span> {<span class="hljs-symbol">:builds</span> [{<span class="hljs-symbol">:id</span> <span class="hljs-string">&quot;dev&quot;</span>            <span class="hljs-comment">;; for the development build, turn on tracing</span>
+                      ....
+                      <span class="hljs-symbol">:compiler</span> {
+                          <span class="hljs-symbol">:closure-defines</span> {<span class="hljs-string">&quot;clairvoyant.core.devmode&quot;</span> <span class="hljs-literal">true</span>}
+                      }}]}
+</code></pre>
+<p>So, just to be clear, if you see no tracing when you are debugging, it 
+is almost certainly because you haven&apos;t successfully turned on this switch. 
+Your production builds need to nothing because, by default, all trace 
+is compiled out of the code. </p>
+<h2 id="the-result">The result</h2>
+<p>Load your app, and open the dev-tools console.  Make an event happen (click a button?). 
+Notice the colour coded tracing showing the functions being called and the derived data flowing. </p>
+<p>Do you see the dominos?</p>
+<h2 id="warning">Warning</h2>
+<p>If the functions you are tracing take large data-structures as parameters, or 
+return large values, then you will be asking clairvoyant to push/log a LOT 
+of data into the <code>js/console</code>. This can take a while and might mean devtools 
+takes a lot of RAM.  </p>
+<p>For example, if your <code>app-db</code> was big and complicated, you might use <code>path</code> 
+middleware to &quot;narrow&quot; that part of <code>app-db</code> passed into your event handler 
+because logging all of <code>app-db</code> to <code>js/console</code> might take a while (and not 
+be that useful).</p>
+<h2 id="react-native">React Native</h2>
+<p>If you have not enabled Remote JS Debugging in the emulator you will 
+get the following error related to console.groupCollapsed:</p>
+<pre><code>[TypeError: console.groupCollapsed is not a function. (In &apos;console.groupCollapsed(&quot;%c%s&quot;,[cljs.core.str(&quot;color:&quot;),cljs.core.str(self__.color),cljs.core.str(&quot;;&quot;)].join(&apos;&apos;),title)&apos;, &apos;console.groupCollapsed&apos; is undefined)] line: 112, column: 23
+</code></pre><p>Enable <strong>Debug JS Remotely</strong> to fix this.</p>
+<h2 id="appendix-a---prior-to-v080">Appendix A - Prior to V0.8.0</h2>
+<p>If you are using v0.8.0 or later, then you can ignore this section.</p>
+<p>Prior to v0.8.0, subscriptions were done using <code>re-frame.core/reg-sub-raw</code>, 
+instead of <code>re-frame.core/reg-sub</code> (which is now the preferred method). </p>
+<p>Details of the changes can <a href="https://github.com/Day8/re-frame/blob/master/CHANGES.md#080--20160819" target="_blank">be found here</a>.</p>
+<p>When using <code>re-frame.core/reg-sub-raw</code>, you must explicitly use <code>reaction</code>.  And 
+unfortunately both <code>trace-forms</code> and <code>reaction</code> are macros and they don&apos;t work well together.
+So there is some necessary changes to your <code>reg-sub-raw</code> code to get them to work with clairvoyant, 
+you need to replace the macro <code>reaction</code> with the function <code>make-reaction</code>.</p>
+<p>Do the following code:</p>
+<pre><code class="lang-cljs">(ns my.ns
+ (:require-macros [reagent.ratom :refer [reaction]]))
+
+;; ...
+
+(re-frame.core/reg-sub-raw
+ :my-sub
+ (fn
+   [db _]
+   (reaction (get-in @db [db-root :my-sub]))))
+</code></pre>
+<p>needs to become</p>
+<pre><code class="lang-cljs">(ns my.ns
+ (:require [reagent.ratom :refer [make-reaction]]))
+
+;; ...
+
+(subs/register
+ :my-sub
+ (fn
+   [db _]
+   (make-reaction (fn my-subscription 
+                    []
+                   (get-in @db [db-root :my-sub])))))
+</code></pre>
+<p>From @mccraigmccraig we get the following (untested by me, but they look great):</p>
+<blockquote>
+<p>I finally had enough of all the boilerplate required to use clairvoyant with 
+re-frame subs &amp; handlers and wrote some code to tidy it up...</p>
+</blockquote>
+<pre><code class="lang-clj">(<span class="hljs-name"><span class="hljs-builtin-name">ns</span></span> er-webui.re-frame
+  (<span class="hljs-symbol">:require</span>
+   [clojure.string <span class="hljs-symbol">:as</span> str]
+   [clojure.pprint <span class="hljs-symbol">:as</span> pp]
+   [clairvoyant.core]
+   [cljs.analyzer <span class="hljs-symbol">:as</span> analyzer]))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">def</span></span> expand-macros
+  #{`reaction
+    `regsub
+    `reghandler})
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> expand-op?
+  <span class="hljs-string">&quot;should the op represented by the sym be expanded...
+   expands the sym to its fully namespaced version and
+   checks against expand-macros&quot;</span>
+  [sym env]
+  (<span class="hljs-name"><span class="hljs-builtin-name">when-let</span></span> [{var-name <span class="hljs-symbol">:name</span>} (<span class="hljs-name">analyzer/resolve-macro-var</span> env sym)]
+    <span class="hljs-comment">;; (pp/pprint [&quot;expand-op?&quot; sym var-name] *err*)</span>
+    (<span class="hljs-name">expand-macros</span> var-name)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> maybe-expand
+  <span class="hljs-string">&quot;recursively descend forms calling macroexpand-1
+   on any forms with a symbol from expand-macros in
+   first position&quot;</span>
+  [form env]
+  (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">seq?</span></span> form)
+           (<span class="hljs-name"><span class="hljs-builtin-name">symbol?</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">first</span></span> form)))
+    (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [[op &amp; r] form
+          resolved-op (<span class="hljs-name">expand-op?</span> op env)]
+      (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> resolved-op
+        (<span class="hljs-name">maybe-expand</span>
+         (<span class="hljs-name"><span class="hljs-builtin-name">macroexpand-1</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> resolved-op r))
+         env)
+        (<span class="hljs-name"><span class="hljs-builtin-name">cons</span></span> op
+              (<span class="hljs-name"><span class="hljs-builtin-name">doall</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">for</span></span> [f r]
+                       (<span class="hljs-name">maybe-expand</span>
+                        f
+                        env))))))
+    form))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> maybe-expand-forms
+  [forms env]
+  (<span class="hljs-name"><span class="hljs-builtin-name">doall</span></span>
+   (<span class="hljs-name"><span class="hljs-builtin-name">for</span></span> [form forms]
+     (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [exp (<span class="hljs-name">maybe-expand</span> form env)]
+       (<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">not=</span></span> exp form)
+         <span class="hljs-comment">;; (pp/pprint exp *err*)</span>
+         )
+       exp))))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defn</span></span> fn-name
+  <span class="hljs-string">&quot;make a sensible fn name from
+   a possibly namespaced symbol or keyword&quot;</span>
+  ([k] (<span class="hljs-name">fn-name</span> k <span class="hljs-string">&quot;&quot;</span>))
+  ([k suffix]
+   (<span class="hljs-name"><span class="hljs-builtin-name">assert</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">or</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">keyword?</span></span> k) (<span class="hljs-name"><span class="hljs-builtin-name">symbol?</span></span> k)))
+   (<span class="hljs-name"><span class="hljs-builtin-name">-&gt;</span></span> k
+       (<span class="hljs-name"><span class="hljs-builtin-name">str</span></span> suffix)
+       (<span class="hljs-name">str/replace</span> #<span class="hljs-string">&quot;^:&quot;</span> <span class="hljs-string">&quot;&quot;</span>)
+       (<span class="hljs-name">str/replace</span> #<span class="hljs-string">&quot;\.&quot;</span> <span class="hljs-string">&quot;-&quot;</span>)
+       (<span class="hljs-name">str/replace</span> <span class="hljs-string">&quot;/&quot;</span> <span class="hljs-string">&quot;--&quot;</span>)
+       symbol)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defmacro</span></span> reaction
+  <span class="hljs-string">&quot;like reagent.core/reaction except it gives the fn a name
+   which makes for useful tracing&quot;</span>
+  [reaction-name &amp; body]
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [reaction-fn-name# (<span class="hljs-name">fn-name</span> reaction-name)]
+    `(<span class="hljs-name">reagent.ratom/make-reaction</span>
+      (~&apos;fn ~reaction-fn-name#
+       []
+       ~@body))))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defmacro</span></span> regsub
+  <span class="hljs-string">&quot;like re-frame.core/register-sub except it creates
+   the fn with a name for better tracing&quot;</span>
+  [sub-key params &amp; body]
+  (<span class="hljs-name"><span class="hljs-builtin-name">assert</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">vector?</span></span> params))
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [sub-fn-name# (<span class="hljs-name">fn-name</span> sub-key)]
+    `(<span class="hljs-name">re-frame.core/register-sub</span>
+      ~sub-key
+      (~&apos;fn ~sub-fn-name#
+       ~params
+       ~@body))))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defmacro</span></span> reghandler
+  <span class="hljs-string">&quot;like re-frame.core/register-handler except it
+   creates an fn with a name which makes for better tracing&quot;</span>
+  [handler-key middleware-or-params &amp; body]
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [handler-fn-name (<span class="hljs-name">fn-name</span> handler-key <span class="hljs-string">&quot;-h&quot;</span>)
+        middleware (<span class="hljs-name"><span class="hljs-builtin-name">when</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">and</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">not</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">vector?</span></span> middleware-or-params))
+                              (<span class="hljs-name"><span class="hljs-builtin-name">vector?</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">first</span></span> body)))
+                     middleware-or-params)
+        params (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> middleware
+                 (<span class="hljs-name"><span class="hljs-builtin-name">first</span></span> body)
+                 middleware-or-params)
+        body (<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> middleware
+               (<span class="hljs-name"><span class="hljs-builtin-name">rest</span></span> body)
+               body)]
+    (<span class="hljs-name"><span class="hljs-builtin-name">assert</span></span> (<span class="hljs-name"><span class="hljs-builtin-name">vector?</span></span> params))
+    `(<span class="hljs-name">re-frame.core/register-handler</span>
+      ~handler-key
+      ~middleware
+      (~&apos;fn ~handler-fn-name
+        ~params
+        ~@body))))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defmacro</span></span> trace-subs
+  [&amp; body]
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [body-forms# (<span class="hljs-name">maybe-expand-forms</span> body &amp;env)]
+    `(<span class="hljs-name">clairvoyant.core/trace-forms</span>
+      {<span class="hljs-symbol">:tracer</span> (<span class="hljs-name">re-frame-tracer.core/tracer</span> <span class="hljs-symbol">:color</span> <span class="hljs-string">&quot;brown&quot;</span>)}
+
+      ~@body-forms#)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defmacro</span></span> trace-handlers
+  [&amp; body]
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [body-forms# (<span class="hljs-name">maybe-expand-forms</span> body &amp;env)]
+    `(<span class="hljs-name">clairvoyant.core/trace-forms</span>
+      {<span class="hljs-symbol">:tracer</span> (<span class="hljs-name">re-frame-tracer.core/tracer</span> <span class="hljs-symbol">:color</span> <span class="hljs-string">&quot;blue&quot;</span>)}
+
+      ~@body-forms#)))
+
+(<span class="hljs-name"><span class="hljs-builtin-name">defmacro</span></span> trace-views
+  [&amp; body]
+  (<span class="hljs-name"><span class="hljs-builtin-name">let</span></span> [body-forms# (<span class="hljs-name">maybe-expand-forms</span> body &amp;env)]
+    `(<span class="hljs-name">clairvoyant.core/trace-forms</span>
+      {<span class="hljs-symbol">:tracer</span> (<span class="hljs-name">re-frame-tracer.core/tracer</span> <span class="hljs-symbol">:color</span> <span class="hljs-string">&quot;green&quot;</span>)}
+
+      ~@body-forms#)))
+</code></pre>
+<blockquote>
+<p>gives you subs like this - </p>
+</blockquote>
+<pre><code class="lang-clj"> (<span class="hljs-name">regsub</span> <span class="hljs-symbol">:initialised</span>
+   [db _]
+   (<span class="hljs-name">reaction</span> initialised-r
+     (<span class="hljs-name"><span class="hljs-builtin-name">get-in</span></span> @db [<span class="hljs-symbol">:initialised</span>])))
+</code></pre>
+<blockquote>
+<p>and handlers like this - </p>
+</blockquote>
+<pre><code class="lang-clj"> (<span class="hljs-name">reghandler</span>
+  <span class="hljs-symbol">:after-init</span>
+   er-middleware
+   [db [_]]
+   (<span class="hljs-name">code-push/sync</span>)
+   db)
+</code></pre>
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Debugging-Event-Handlers.html" class="navigation navigation-prev " aria-label="Previous page: Debugging Event Handlers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Testing.html" class="navigation navigation-next " aria-label="Next page: Testing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Debugging","level":"9.2","depth":1,"next":{"title":"Testing","level":"9.3","depth":1,"path":"Testing.md","ref":"Testing.md","articles":[]},"previous":{"title":"Debugging Event Handlers","level":"9.1","depth":1,"path":"Debugging-Event-Handlers.md","ref":"Debugging-Event-Handlers.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"root":"./docs/","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"README.md"},"variables":{},"title":"re-frame","language":"en","gitbook":"*","description":"Documentation of re-frame framework"},"file":{"path":"Debugging.md","mtime":"2017-09-21T10:24:52.721Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-09-21T10:34:13.106Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
